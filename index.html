@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>力雅微</title>
+	<link href="css/bootstrap.css" rel="stylesheet">
+	<link href="css/index.css" rel="stylesheet">
+	<!--[if lt IE 9]>
+	<script src="js/html5shiv.min.js"></script>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+</head>
+<body>
+
+<!--begin: 导航条-->
+<div class="am-header am-header-fixed">
+	<div class="am-header-menu pull-left">
+
+		<a href="javascript:;" class="slide-menu" target="_self">
+			<!--<img src="http://hovertree.com/texiao/mobile/2/menu.png" alt="">-->
+			三
+		</a>
+	</div>
+	<div class="am-header-nav pull-left ">
+		<img
+				src="//wx.qlogo.cn/mmopen/Q3auHgzwzM5eR1rGXWfKbg4U9JgdDeBrjUFx04RWn4PicBEdgO27YN3zp3OEk88xySgndnoSNnHnBiaiaDXldU5wYdj0NVRBIdTXdBALO81hFQ/0"
+				class="am-icon-btn" style="width:35px; height:35px;margin-top: 0">
+		余额(元):
+		<label id="myMoney">
+			100000.00
+		</label>
+		<a href="#">
+			<button type="button" class="btn btn-danger btn-sm" style="background-color:#FF5500;">充值
+			</button>
+		</a>
+	</div>
+
+	<div id="priceList">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-4 ss-bj-green border-right-line">
+					<div>Copper</div>
+					<div>
+						<label id="label-Copper">28667</label>
+						<i class="am-icon-long-arrow-down"></i>
+					</div>
+				</div>
+
+				<div class="col-xs-4 ss-bj-green border-right-line">
+					<div>
+						USOil
+					</div>
+					<div>
+						<label id="label-USOil">32.2</label>
+						<i class="am-icon-long-arrow-down"></i>
+					</div>
+				</div>
+				<div class="col-xs-4 ss-bj-red border-right-line">
+					<div>
+						Copper
+					</div>
+					<div>
+						<label id="label-XAGUSD">2827</label>
+						<i class="am-icon-long-arrow-up"></i>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>
+<!--end: 导航条-->
+<div class="main">
+	<div class="container">
+		<div class="am-list-news-hd ">
+			<h4>交易品种</h4>
+		</div>
+
+		<div class="row" id="Copper_1000kg">
+			<div class="col-xs-2">
+				<a href="#" class="btn am-btn buy-increase ">买涨</a>
+			</div>
+			<div class="col-xs-7">
+				<div class="row">
+					<div class="col-xs-12">
+						1000kg铜
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-5 red">1000.0元/手</div>
+					<div class="col-xs-7">波动盈亏：1.0元</div>
+				</div>
+			</div>
+			<div class="col-xs-2">
+				<a href="#" class="btn am-btn buy-decrease ">买跌</a>
+			</div>
+		</div>
+		<div class="row" id="Copper_100kg">
+			<div class="col-xs-2">
+				<a href="#" class="btn am-btn buy-increase ">买涨</a>
+			</div>
+			<div class="col-xs-7">
+				<div class="row">
+					<div class="col-xs-12">
+						100kg铜
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-5 red">100.0元/手</div>
+					<div class="col-xs-7">波动盈亏：0.1元</div>
+				</div>
+			</div>
+			<div class="col-xs-2">
+				<a href="#" class="btn am-btn buy-decrease ">买跌</a>
+			</div>
+		</div>
+		<div class="row" id="Copper_10kg">
+			<div class="col-xs-2">
+				<a href="#" class="btn am-btn buy-increase ">买涨</a>
+			</div>
+			<div class="col-xs-7">
+				<div class="row">
+					<div class="col-xs-12">
+						10kg铜
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-5 red">9.0元/手</div>
+					<div class="col-xs-7">波动盈亏：0.01元</div>
+				</div>
+			</div>
+			<div class="col-xs-2">
+				<a href="#" class="btn am-btn buy-decrease ">买跌</a>
+			</div>
+		</div>
+
+
+		<div class="am-list-news-hd">
+			<h4>行情走势</h4>
+		</div>
+
+		<div class="row am-stock-title-bar">
+		</div>
+		<div class="btn-group btn-group-justified">
+			<label class="btn am-btn">
+				Copper
+			</label>
+			<label class="btn am-btn am-active">
+				USOil
+			</label>
+			<label class="btn am-btn btn-default">
+				XAGUSD
+			</label>
+		</div>
+
+		<div id="container" style="width:100%; height:400px;"></div>
+
+		<div class="am-list-news-hd">
+			<h4>最新资讯</h4>
+		</div>
+
+
+		<div class="">
+			<ul class="list-unstyled am-list-news">
+				<li><a href="#">关于微盘停止试运行的通知</a></li>
+				<li><a href="#">200号会员单位微盘首发</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+
+<!-- 侧边导航 -->
+<div class="slide-mask"></div>
+<aside class="slide-wrapper">
+	<div class="am-menu-nav">
+		<ul class="list-unstyled">
+			<li><img	src="img/0"	class="am-icon-btn" ></li>
+			<li><a href="#">首页</a></li>
+			<li><a href="#">充值</a></li>
+			<li><a href="#">提现</a></li>
+			<li><a href="#">订单列表</a></li>
+			<li><a href="#">交易历史</a></li>
+			<li><a href="#">排行榜</a></li>
+			<li><a href="#">收支明细</a></li>
+			<li><a href="#">个人信息</a></li>
+			<li><a href="#">交易规则</a></li>
+		</ul>
+	</div>
+</aside>
+
+
+<script src="js/jquery-1.11.3.js"></script>
+<script src="js/bootstrap.js"></script>
+<script>
+	(function () {
+		var s = document.createElement("script");
+		s.onload = function () {
+			bootlint.showLintReportForCurrentDocument([]);
+		};
+		s.src = "js/bootlint.js";
+		document.body.appendChild(s)
+	})();
+</script>
+<script src="https://code.highcharts.com/stock/highstock.js"></script>
+<script src="https://code.highcharts.com/stock/modules/exporting.js"></script>
+
+<script type="text/javascript">
+	$(function () {
+		/**/
+		$('aside.slide-wrapper').on('touchstart', 'li', function (e) {
+			$(this).addClass('current').siblings('li').removeClass('current');
+		});
+
+		$('a.slide-menu').on('click', function (e) {
+			var wh = $('div.wrapperhove' + 'rtree').height();
+			$('div.slide-mask').css('height', wh).show();
+			$('aside.slide-wrapper').css('height', wh).addClass('moved');
+		});
+
+		$('div.slide-mask').on('click', function () {
+			$('div.slide-mask').hide();
+			$('aside.slide-wrapper').removeClass('moved');
+		});
+
+	/**/
+	var orgHighchartsRangeSelectorPrototypeRender = Highcharts.RangeSelector.prototype.render;
+	Highcharts.RangeSelector.prototype.render = (function (func) {
+		return function () {
+			func.apply(this, arguments);
+			var leftPosition = this.chart.plotLeft,
+			//topPosition = this.chart.plotHeight + this.chart.plotTop ,
+					topPosition = this.chart.containerHeight,// - this.chart.plotTop,
+					space = 2;
+//			console.log(this.chart, topPosition);
+			this.zoomText.attr({
+				x: leftPosition,
+				y: topPosition + 15
+			});
+			leftPosition += this.zoomText.getBBox().width;
+			for (var i = 0; i < this.buttons.length; i++) {
+				this.buttons[i].attr({
+					x: leftPosition,
+					y: topPosition
+				});
+				leftPosition += this.buttons[i].width + space;
+			}
+		}
+	}(Highcharts.RangeSelector.prototype.render));
+
+
+	//$.getJSON('https://www.highcharts.com/samples/data/jsonp.php?filename=aapl-c.json&callback=?', function (data) {
+	data = [
+		[Date.UTC(2015, 11, 24, 14, 55), 230.6],
+		[Date.UTC(2015, 11, 24, 14, 57), 230.2],
+		[Date.UTC(2015, 11, 24, 15, 1), 231.3],
+		[Date.UTC(2015, 11, 24, 15, 5), 231.8],
+		[Date.UTC(2015, 11, 24, 15, 7, 1), 231.3],
+		[Date.UTC(2015, 11, 24, 15, 7, 3), 231.9],
+		[Date.UTC(2015, 11, 24, 15, 7, 37), 231.9],
+		[Date.UTC(2015, 11, 24, 15, 7, 55), 231.9],
+		[Date.UTC(2015, 11, 24, 15, 8, 3), 231.9],
+		[Date.UTC(2015, 11, 24, 15, 10), 231.8],
+		[Date.UTC(2015, 11, 24, 15, 11), 232.1],
+		[Date.UTC(2015, 11, 24, 15, 12), 232.2],
+		[Date.UTC(2015, 11, 24, 15, 13), 232.3]
+	];
+	// Create the chart
+	$('#container').highcharts('StockChart', {
+		credits: {
+			enabled: false
+		},
+		navigator: {
+			enabled: false
+		},
+		scrollbar: {
+			enabled: false
+		},
+		exporting: {
+			enabled: false
+		},
+		rangeSelector: {
+			allButtonsEnabled: true,
+			buttonSpacing: 0,
+			buttonTheme: { // styles for the buttons
+				fill: 'none',
+				stroke: 'none',
+				'stroke-width': 0,
+				r: 0,
+				width: 50,
+				height: 18,
+				padding: 7,
+				style: {
+					fill: '#3F94B9'
+				},
+				states: {
+					hover: {},
+					select: {
+						fill: '#3F94B9',
+						style: {
+							color: 'white'
+						}
+					}
+				}
+			},
+			buttons: [{
+				type: 'minute',
+				count: 30,
+				text: '分时线'
+			}, {
+				type: 'minute',
+				count: 5,
+				text: '5分钟'
+			}, {
+				type: 'minute',
+				count: 10,
+				text: '10分钟'
+			}, {
+				type: 'minute',
+				count: 30,
+				text: '30分钟'
+			}, {
+				type: 'minute',
+				count: 60,
+				text: '1小时'
+			}, {
+				type: 'all',
+				text: '日K线'
+			}],
+			labelStyle: {
+				color: 'white',
+			},
+			inputEnabled: false,
+			selected: 0
+		},
+
+		title: {
+			text: ''
+		},
+		subtitle: {
+			text: '<span>最高: 232.6  昨收：231.06</span><br><span>最低: 227.5  今开：231.00</span>',
+			align: 'right',
+			style: {
+				color: '#3F94B9'
+			},
+			useHtml: true,
+		},
+		series: [{
+			name: 'USOil',
+			data: data
+		}],
+		tooltip: {
+//						valueDecimals: 2,
+//						xDateFormat: '%Y-%m-%d %H:%M',
+			formatter: function () {
+				var s = '<b>' + Highcharts.dateFormat('%Y-%m-%d %H:%M', this.x) + '</b>';
+
+				$.each(this.points, function () {
+					s += '<br/>' + this.series.name + ":" + this.y + ' 元';
+				});
+
+				return s;
+			}
+		},
+		xAxis: {
+			dateTimeLabelFormats: {
+				second: '%H:%M',
+				minute: '%H:%M',
+				hour: '%H:%M',
+				day: '%m-%d',
+			},
+//						tickPositions: []
+			lineColor: "#011"
+		},
+		yAxis: {
+			gridLineWidth: 1,
+			opposite: false,
+			lineWidth: 1,
+			lineColor: "#011"
+		}
+	});
+	}
+	)
+	;
+
+	//});
+
+</script>
+</body>
+</html>

@@ -1,0 +1,235 @@
+body {
+  margin-top: 130px;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* header - 导航条 */
+.am-header {
+  position: relative;
+  width: 100%;
+  height: 49px;
+  line-height: 49px;
+  padding: 0 10px;
+}
+
+.am-header-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+}
+
+.am-header-nav {
+  position: absolute;
+  left: 50px;
+}
+
+.am-header-nav img {
+  width: 35px;
+  height: 35px;
+  margin-top: -10px;
+}
+
+.am-icon-btn {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  font-size: 24px;
+  line-height: 48px;
+  border-radius: 50%;
+  background-color: #eee;
+  color: #555;
+  text-align: center;
+}
+
+.am-header div {
+  /*display: inline-block;*/
+}
+/* 侧边导航 */
+.am-menu-nav img {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  font-size: 24px;
+  line-height: 100px;
+  border-radius: 50%;
+  background-color: #eee;
+  color: #555;
+  text-align: center;
+}
+.am-menu-nav li:nth-child(1) {
+  height: 115px;
+  text-align: center;
+}
+.am-menu-nav li:nth-child(1) img {
+  margin-top: .5rem;
+  margin-bottom: .5rem;
+  vertical-align: top;
+}
+
+.slide-mask {
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  display: none;
+}
+
+aside.slide-wrapper {
+  position: fixed;
+  z-index: 4;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 45%;
+  max-width: 100%;
+  -webkit-transform: translate3d(-100%, 0, 0);
+  -moz-transform: translate3d(-100%, 0, 0);
+  -ms-transform: translate3d(-100%, 0, 0);
+  -o-transform: translate3d(-100%, 0, 0);
+  transform: translate3d(-100%, 0, 0);
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+aside.slide-wrapper > div {
+  background-color: #242527;
+  min-height: 100%;
+}
+aside.slide-wrapper > div > div {
+  padding: 0 10px;
+  height: 45px;
+  background-color: #262626;
+  overflow: hidden;
+}
+aside.slide-wrapper > div > div strong {
+  height: 45px;
+  line-height: 45px;
+  font-size: 18px;
+  color: #ffffff;
+  font-weight: normal;
+}
+aside.slide-wrapper.moved {
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+aside.slide-wrapper li > a {
+  padding: 15px 40px;
+  border-top: 1px solid #4d4d4d;
+  border-bottom: 1px solid #262626;
+  font-size: 15px;
+  display: block;
+  color: #fff;
+}
+aside.slide-wrapper li.current > a {
+  background-color: #262626;
+}
+
+/* header - 实时报价 */
+.ss-bj-green {
+  background-color: #1F921D;
+}
+
+.ss-bj-red {
+  background-color: #AF2B2B;
+}
+
+.border-right-line {
+  border-right: 1px solid #fcfdfb;
+}
+
+#priceList {
+  line-height: 20px;
+  color: #fff;
+  text-align: center;
+  position: absolute;
+  top: 50px;
+  left: 2%;
+  right: 2%;
+}
+
+#priceList div {
+  margin-top: 3px;
+}
+
+/* main */
+/* 标题*/
+
+.border-top-bottom {
+
+}
+
+.am-list-news-hd {
+  padding-bottom: 0;
+  margin-top: 10px;
+  background-color: #F6F6F6;
+  border-bottom: 1.5px solid #999999;
+  border-top: 1px solid #999999;
+  height: 37px;
+  margin-bottom: 10px;
+}
+
+.am-list-news-hd > h4 {
+  margin-left: 10px;
+  font-size: 1.2em;
+}
+
+.buy-increase {
+  background-color: #CB0406;
+  color: #fff;
+}
+
+.buy-decrease {
+  background-color: #259E26;
+  color: #fff;
+}
+
+.am-btn {
+  border-radius: 0;
+}
+
+.red {
+  color: #FC3737;
+}
+
+/*行情走势*/
+.am-stock-title-bar {
+  text-align: center;
+  /*height: 41px;*/
+}
+
+.btn-group > .am-btn {
+  background-color: #E6E6E6;
+}
+
+.am-active {
+  background-color: #3F94B9 !important;
+  color: #fff;
+}
+
+/*最新资讯*/
+
+.am-list-news {
+  margin: 10px 10px 0px 10px;
+}
