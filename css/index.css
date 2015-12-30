@@ -1,9 +1,60 @@
 body {
-  margin-top: 130px;
+  /*margin-top: 130px;*/
+  margin-bottom: 80px;
 }
 
 img {
   max-width: 100%;
+}
+
+.f-size {
+  font-size: .875rem
+}
+
+.f-big {
+  font-size: 200%;
+}
+
+.dotted-line {
+  border-bottom: 1px dotted;
+}
+
+.bg-orange {
+  background-color: #FF5500;
+}
+
+.text-orange {
+  color: #FF5500;
+}
+
+.text-white {
+  color: #fff;
+}
+
+.am-circle {
+  border-radius: 50%;
+}
+
+/*header {*/
+/*margin-bottom: 5px;*/
+/*}*/
+
+.am-row {
+  margin: 10px 0;
+}
+
+.am-row:before,
+.am-row:after {
+  content: " ";
+  display: table;
+}
+
+.am-nav-bg {
+  background-color: #FE0101;
+}
+
+.input-error {
+  border-color: #dd514c !important;
 }
 
 /* header - 导航条 */
@@ -21,11 +72,13 @@ img {
   left: 0;
   right: 0;
   width: 100%;
+  z-index: 1030;
 }
 
 .am-header-nav {
   position: absolute;
   left: 50px;
+  width: 75%;
 }
 
 .am-header-nav img {
@@ -51,25 +104,50 @@ img {
 .am-header div {
   /*display: inline-block;*/
 }
-/* 侧边导航 */
+
+.am-icon-long-arrow-down,
+.am-icon-long-arrow-up {
+  display: inline-block;
+  width: 9px;
+  height: 19px;
+  background: url(../img/down-arrow.png) no-repeat;
+  position: relative;
+  top: 5px;
+}
+
+.am-icon-long-arrow-up {
+  background: url(../img/up-arrow.png) no-repeat;
+}
+
+/* 侧边导航 menu*/
 .am-menu-nav img {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   display: inline-block;
-  width: 100px;
-  height: 100px;
   font-size: 24px;
   line-height: 100px;
-  border-radius: 50%;
   background-color: #eee;
   color: #555;
   text-align: center;
+
+  width: 18px;
+  height: 17px;
+  border-radius: 0;
+  background: none;
+  position: relative;
+  top: -3px;
+  left: -5px;
 }
+
 .am-menu-nav li:nth-child(1) {
   height: 115px;
   text-align: center;
 }
+
 .am-menu-nav li:nth-child(1) img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
   margin-top: .5rem;
   margin-bottom: .5rem;
   vertical-align: top;
@@ -97,7 +175,7 @@ aside.slide-wrapper {
   left: 0;
   top: 0;
   bottom: 0;
-  width: 45%;
+  width: 40%;
   max-width: 100%;
   -webkit-transform: translate3d(-100%, 0, 0);
   -moz-transform: translate3d(-100%, 0, 0);
@@ -110,23 +188,27 @@ aside.slide-wrapper {
   -o-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
 }
+
 aside.slide-wrapper > div {
   background-color: #242527;
   min-height: 100%;
 }
+
 aside.slide-wrapper > div > div {
   padding: 0 10px;
   height: 45px;
   background-color: #262626;
   overflow: hidden;
 }
+
 aside.slide-wrapper > div > div strong {
   height: 45px;
   line-height: 45px;
   font-size: 18px;
-  color: #ffffff;
+  color: #fff;
   font-weight: normal;
 }
+
 aside.slide-wrapper.moved {
   -webkit-transform: translate3d(0, 0, 0);
   -moz-transform: translate3d(0, 0, 0);
@@ -134,6 +216,7 @@ aside.slide-wrapper.moved {
   -o-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }
+
 aside.slide-wrapper li > a {
   padding: 15px 40px;
   border-top: 1px solid #4d4d4d;
@@ -142,6 +225,7 @@ aside.slide-wrapper li > a {
   display: block;
   color: #fff;
 }
+
 aside.slide-wrapper li.current > a {
   background-color: #262626;
 }
@@ -152,7 +236,7 @@ aside.slide-wrapper li.current > a {
 }
 
 .ss-bj-red {
-  background-color: #AF2B2B;
+  background-color: #CE3333;
 }
 
 .border-right-line {
@@ -163,14 +247,10 @@ aside.slide-wrapper li.current > a {
   line-height: 20px;
   color: #fff;
   text-align: center;
-  position: absolute;
-  top: 50px;
+  top: 0;
   left: 2%;
   right: 2%;
-}
-
-#priceList div {
-  margin-top: 3px;
+  z-index: 1050;
 }
 
 /* main */
@@ -195,22 +275,43 @@ aside.slide-wrapper li.current > a {
   font-size: 1.2em;
 }
 
+.am-g {
+  background-color: #F3F3F3;
+  border-bottom: 1px solid #fff;
+}
+
+/*交易品种*/
 .buy-increase {
   background-color: #CB0406;
-  color: #fff;
 }
 
 .buy-decrease {
   background-color: #259E26;
-  color: #fff;
 }
 
 .am-btn {
+  display: inline-block;
+  text-align: center;
+  height: 40px;
+  line-height: 40px;
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin: 0;
+  padding: 0;
   border-radius: 0;
+  width: 100%;
 }
 
-.red {
-  color: #FC3737;
+.silver {
+  color: #366092;
+}
+
+.am-bought {
+  position: absolute;
+  top: 0px;
+  right: 10px;
+  height: 40px;
+  display: none;
 }
 
 /*行情走势*/
@@ -228,8 +329,99 @@ aside.slide-wrapper li.current > a {
   color: #fff;
 }
 
+.am-btn > input {
+  position: absolute;
+  z-index: -1;
+  width: 0;
+}
+
 /*最新资讯*/
 
 .am-list-news {
   margin: 10px 10px 0px 10px;
+}
+
+/*order-list*/
+.am-header-title {
+  font-size: 2rem;
+  font-weight: 400;
+  text-align: center;
+  display: block;
+  word-wrap: normal;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/*user-info*/
+
+.am-group {
+  padding-left: 0;
+  margin-bottom: 20px;
+}
+
+.am-group-item {
+  position: relative;
+  display: block;
+  padding: 10px 15px;
+  margin-bottom: -1px;
+  border: 1px solid #ddd;
+}
+
+/*盈亏排行榜*/
+.pm1 {
+  height: 80px;
+  background-image: url(../img/rank-list/pm1.jpg);
+  background-size: 100% 100%;
+}
+
+.pm2 {
+  color: #FFF;
+  font-size: 18px;
+  padding-left: 5px;
+}
+
+.pm3 {
+  color: #DD9E65;
+  margin-left: 5px;
+}
+
+.pm4 {
+  font-size: 18px;
+  color: #000;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.pm5 {
+  border-bottom: 4px #F3F1F2;
+  margin-bottom: 15px;
+}
+
+.pm6 {
+  color: #000;
+  text-align: center;
+}
+
+.pm7 {
+  color: #F00;
+  text-align: center;
+}
+
+.pm8 {
+  margin-bottom: 10px;
+}
+
+.pm9 {
+  color: #FB9B3F;
+  text-align: left;
+  font-size: 30px;
+  font-weight: bold;
+  text-indent: 1.9%;
+}
+
+.tubiao {
+  background-image: url(../img/rank-list/iconpm.png);
+  background-repeat: no-repeat;
+  background-position: 100% 5px;
 }

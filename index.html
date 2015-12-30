@@ -13,14 +13,13 @@
 	<![endif]-->
 </head>
 <body>
-
 <!--begin: 导航条-->
-<div class="am-header am-header-fixed">
+<div class="am-header  ">
 	<div class="am-header-menu pull-left">
 
-		<a href="javascript:;" class="slide-menu" target="_self">
+		<a href="javascript:void(0);" class="slide-menu" target="_self">
 			<!--<img src="http://hovertree.com/texiao/mobile/2/menu.png" alt="">-->
-			三
+			<img src="img/toggle.png" alt=""/>
 		</a>
 	</div>
 	<div class="am-header-nav pull-left ">
@@ -32,44 +31,77 @@
 			100000.00
 		</label>
 		<a href="#">
-			<button type="button" class="btn btn-danger btn-sm" style="background-color:#FF5500;">充值
+			<button type="button" class="btn btn-danger btn-sm bg-orange">充值
 			</button>
 		</a>
 	</div>
 
-	<div id="priceList">
-		<div class="container">
-			<div class="row">
-				<div class="col-xs-4 ss-bj-green border-right-line">
-					<div>Copper</div>
-					<div>
-						<label id="label-Copper">28667</label>
-						<i class="am-icon-long-arrow-down"></i>
-					</div>
-				</div>
 
-				<div class="col-xs-4 ss-bj-green border-right-line">
-					<div>
-						USOil
-					</div>
-					<div>
-						<label id="label-USOil">32.2</label>
-						<i class="am-icon-long-arrow-down"></i>
-					</div>
+	<!--<div id="priceList" >-->
+	<!--<div class="container">-->
+	<!--<div class="row">-->
+	<!--<div class="col-xs-4 ss-bj-green border-right-line">-->
+	<!--<div>Copper</div>-->
+	<!--<div>-->
+	<!--<label id="label-Copper">28667</label>-->
+	<!--<i class="am-icon-long-arrow-down"></i>-->
+	<!--</div>-->
+	<!--</div>-->
+
+	<!--<div class="col-xs-4 ss-bj-green border-right-line">-->
+	<!--<div>-->
+	<!--USOil-->
+	<!--</div>-->
+	<!--<div>-->
+	<!--<label id="label-USOil">32.2</label>-->
+	<!--<i class="am-icon-long-arrow-down"></i>-->
+	<!--</div>-->
+	<!--</div>-->
+	<!--<div class="col-xs-4 ss-bj-red border-right-line">-->
+	<!--<div>-->
+	<!--Copper-->
+	<!--</div>-->
+	<!--<div>-->
+	<!--<label id="label-XAGUSD">2827</label>-->
+	<!--<i class="am-icon-long-arrow-up"></i>-->
+	<!--</div>-->
+	<!--</div>-->
+	<!--</div>-->
+	<!--</div>-->
+	<!--</div>-->
+
+</div>
+<div data-spy="affix" data-offset-top="130" id="priceList">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-4 ss-bj-green border-right-line">
+				<div>Copper</div>
+				<div>
+					<label id="label-Copper">28667</label>
+					<i class="am-icon-long-arrow-down"></i>
 				</div>
-				<div class="col-xs-4 ss-bj-red border-right-line">
-					<div>
-						Copper
-					</div>
-					<div>
-						<label id="label-XAGUSD">2827</label>
-						<i class="am-icon-long-arrow-up"></i>
-					</div>
+			</div>
+
+			<div class="col-xs-4 ss-bj-green border-right-line">
+				<div>
+					USOil
+				</div>
+				<div>
+					<label id="label-USOil">32.2</label>
+					<i class="am-icon-long-arrow-down"></i>
+				</div>
+			</div>
+			<div class="col-xs-4 ss-bj-red border-right-line">
+				<div>
+					XAGUSD
+				</div>
+				<div>
+					<label id="label-XAGUSD">2813</label>
+					<i class="am-icon-long-arrow-up"></i>
 				</div>
 			</div>
 		</div>
 	</div>
-
 </div>
 <!--end: 导航条-->
 <div class="main">
@@ -78,64 +110,130 @@
 			<h4>交易品种</h4>
 		</div>
 
-		<div class="row" id="Copper_1000kg">
+		<div class="row am-g" id="Copper_1000kg">
 			<div class="col-xs-2">
-				<a href="#" class="btn am-btn buy-increase ">买涨</a>
+				<a href="#" class="am-btn buy-increase text-white " data-toggle="modal"
+					 data-target="#contract">买涨</a>
 			</div>
-			<div class="col-xs-7">
+			<div class="col-xs-8">
 				<div class="row">
 					<div class="col-xs-12">
-						1000kg铜
+						<b>1000kg铜</b>
+						<img class="am-bought" src="img/IconKnockdown.png">
 					</div>
 				</div>
-				<div class="row">
-					<div class="col-xs-5 red">1000.0元/手</div>
+				<div class="row f-size">
+					<div class="col-xs-5"><span class="text-danger">1000.0元/手</span></div>
 					<div class="col-xs-7">波动盈亏：1.0元</div>
 				</div>
 			</div>
 			<div class="col-xs-2">
-				<a href="#" class="btn am-btn buy-decrease ">买跌</a>
+				<a href="#" class="am-btn buy-decrease text-white " data-toggle="modal"
+					 data-target="#contract">买跌</a>
 			</div>
+
 		</div>
-		<div class="row" id="Copper_100kg">
+		<div class="row am-g" id="Copper_100kg">
 			<div class="col-xs-2">
-				<a href="#" class="btn am-btn buy-increase ">买涨</a>
+				<a href="#" class="am-btn buy-increase text-white ">买涨</a>
 			</div>
-			<div class="col-xs-7">
+			<div class="col-xs-8">
 				<div class="row">
 					<div class="col-xs-12">
-						100kg铜
+						<b>100kg铜</b>
+						<img class="am-bought" src="img/IconKnockdown.png">
 					</div>
 				</div>
-				<div class="row">
-					<div class="col-xs-5 red">100.0元/手</div>
+				<div class="row f-size">
+					<div class="col-xs-5"><span class="text-danger">100.0元/手</span></div>
 					<div class="col-xs-7">波动盈亏：0.1元</div>
 				</div>
 			</div>
 			<div class="col-xs-2">
-				<a href="#" class="btn am-btn buy-decrease ">买跌</a>
+				<a href="#" class="am-btn buy-decrease text-white ">买跌</a>
 			</div>
 		</div>
-		<div class="row" id="Copper_10kg">
+		<div class="row am-g" id="Copper_10kg">
 			<div class="col-xs-2">
-				<a href="#" class="btn am-btn buy-increase ">买涨</a>
+				<a href="#" class="am-btn buy-increase text-white ">买涨</a>
 			</div>
-			<div class="col-xs-7">
+			<div class="col-xs-8">
 				<div class="row">
 					<div class="col-xs-12">
-						10kg铜
+						<b>10kg铜</b>
+						<img class="am-bought" src="img/IconKnockdown.png">
 					</div>
 				</div>
-				<div class="row">
-					<div class="col-xs-5 red">9.0元/手</div>
+				<div class="row f-size">
+					<div class="col-xs-5"><span class="text-danger">9.0元/手</span></div>
 					<div class="col-xs-7">波动盈亏：0.01元</div>
 				</div>
 			</div>
 			<div class="col-xs-2">
-				<a href="#" class="btn am-btn buy-decrease ">买跌</a>
+				<a href="#" class="am-btn buy-decrease text-white ">买跌</a>
 			</div>
 		</div>
 
+		<div class="row am-g">
+			<div class="col-xs-2">
+				<a href="#" class="am-btn buy-increase text-white ">买涨</a>
+			</div>
+			<div class="col-xs-8">
+				<div class="row">
+					<div class="col-xs-12">
+						<b>10kg铜</b>
+						<img class="am-bought" src="img/IconKnockdown.png">
+					</div>
+				</div>
+				<div class="row f-size">
+					<div class="col-xs-5"><span class="text-danger">9.0元/手</span></div>
+					<div class="col-xs-7">波动盈亏：0.01元</div>
+				</div>
+			</div>
+			<div class="col-xs-2">
+				<a href="#" class="am-btn buy-decrease text-white ">买跌</a>
+			</div>
+		</div>
+		<div class="row am-g">
+			<div class="col-xs-2">
+				<a href="#" class="am-btn buy-increase text-white ">买涨</a>
+			</div>
+			<div class="col-xs-8">
+				<div class="row">
+					<div class="col-xs-12">
+						<b>10kg铜</b>
+						<img class="am-bought" src="img/IconKnockdown.png">
+					</div>
+				</div>
+				<div class="row f-size">
+					<div class="col-xs-5"><span class="text-danger">9.0元/手</span></div>
+					<div class="col-xs-7">波动盈亏：0.01元</div>
+				</div>
+			</div>
+			<div class="col-xs-2">
+				<a href="#" class="am-btn buy-decrease text-white ">买跌</a>
+			</div>
+		</div>
+		<div class="row am-g">
+			<div class="col-xs-2">
+				<a href="#" class="am-btn buy-increase text-white ">买涨</a>
+			</div>
+			<div class="col-xs-8">
+				<div class="row">
+					<div class="col-xs-12">
+						<b class="silver">10kg银</b>
+						<img class="am-bought show" src="img/IconKnockdown.png">
+					</div>
+				</div>
+				<div class="row f-size">
+					<div class="col-xs-5"><span class="text-danger">9.0元/手</span></div>
+					<div class="col-xs-7">波动盈亏：0.01元</div>
+				</div>
+			</div>
+			<div class="col-xs-2">
+				<a href="#" class="am-btn buy-decrease text-white text-white ">买跌</a>
+			</div>
+		</div>
 
 		<div class="am-list-news-hd">
 			<h4>行情走势</h4>
@@ -157,10 +255,30 @@
 
 		<div id="container" style="width:100%; height:400px;"></div>
 
+		<div class="btn-group btn-group-justified" id="stock-tend">
+			<label class="btn am-btn am-active">
+				<input type="radio" name="options" value="M1" id="option1"> 分时线
+			</label>
+			<label class="btn am-btn ">
+				<input type="radio" name="options" value="M5" id="option2"> 5分钟
+			</label>
+			<label class="btn am-btn btn-default" data-v="M15">
+				<input type="radio" name="options" value="M15" id="option3"> 15分钟
+			</label>
+			<label class="btn am-btn ">
+				<input type="radio" name="options" value="M30" id="option4"> 30分钟
+			</label>
+			<label class="btn am-btn ">
+				<input type="radio" name="options" value="H1" id="option5"> 1小时
+			</label>
+			<label class="btn am-btn ">
+				<input type="radio" name="options" value="D1" id="option6">日k线
+			</label>
+		</div>
+
 		<div class="am-list-news-hd">
 			<h4>最新资讯</h4>
 		</div>
-
 
 		<div class="">
 			<ul class="list-unstyled am-list-news">
@@ -170,30 +288,195 @@
 		</div>
 	</div>
 </div>
+<!--订立合同确认 - 弹出框-->
+<div class="modal fade" id="contract">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header text-center bg-danger">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+						aria-hidden="true">&times;</span></button>
+				订立合同确认
+			</div>
+			<div class="modal-body">
+				<div class="btn-group btn-group-justified">
+					<a href="#" class="btn btn-danger">1</a>
+					<a href="#" class="btn btn-default">2</a>
+					<a href="#" class="btn btn-default">5</a>
+					<a href="#" class="btn btn-default">10</a>
+				</div>
+				<div class="dotted-line">
+					<span class="text-danger f-big">9</span>元 <span class="text-muted">手续费0.81</span>
+				</div>
+				<div class="dotted-line">
+					价格：226.27 <br/>
+					方向：<span class="text-danger">买涨</span> <br/>
+					1桶原油
+				</div>
+				<div class="btn-group btn-group-justified">
+					<a class="btn btn-warning" href="#" data-toggle="modal"
+						 data-target="#reset-stops" data-dismiss="modal">确认订立合同
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 
+<!--设置合同止损，并保存合同 - 弹出框-->
+<div class="modal fade" id="reset-stops">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header text-center">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+						aria-hidden="true">&times;</span></button>
+				<p>信息修改</p>
+			</div>
+			<div class="modal-body">
+				<div class="container">
+					<div>
+						设置止盈/止损:
+					</div>
+					<div class="row am-row">
+						<div class="col-xs-2">止盈</div>
+						<div class="col-xs-10">
+							<div class="btn-group btn-group-justified">
+								<a href="#" class="btn btn-danger">不设</a>
+								<a href="#" class="btn btn-default">10%</a>
+								<a href="#" class="btn btn-default">20%</a>
+								<a href="#" class="btn btn-default">30%</a>
+								<a href="#" class="btn btn-default">40%</a>
+							</div>
+							<div class="btn-group btn-group-justified">
+								<a href="#" class="btn btn-default">50%</a>
+								<a href="#" class="btn btn-default">60%</a>
+								<a href="#" class="btn btn-default">70%</a>
+								<a href="#" class="btn btn-default">80%</a>
+								<a href="#" class="btn btn-default">90%</a>
+							</div>
+						</div>
+					</div>
+					<div class="row am-row">
+						<div class="col-xs-2">止损</div>
+						<div class="col-xs-10">
+							<div class="btn-group btn-group-justified">
+								<a href="#" class="btn btn-danger">不设</a>
+								<a href="#" class="btn btn-default">10%</a>
+								<a href="#" class="btn btn-default">20%</a>
+								<a href="#" class="btn btn-default">30%</a>
+								<a href="#" class="btn btn-default">40%</a>
+							</div>
+							<div class="btn-group btn-group-justified">
+								<a href="#" class="btn btn-default">50%</a>
+								<a href="#" class="btn btn-default">60%</a>
+								<a href="#" class="btn btn-default">70%</a>
+								<a href="#" class="btn btn-default">80%</a>
+								<a href="#" class="btn btn-default">90%</a>
+							</div>
+						</div>
+					</div>
+					<div class="btn-group btn-group-justified">
+						<a class="btn btn-warning" href="#" data-toggle="modal"
+							 data-target="#alert-box" data-dismiss="modal">保存并完成
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!--屏幕底部已购买订单展示-->
+<div class="navbar navbar-inverse navbar-fixed-bottom">
+	<div class="container text-white">
+		<div class="row am-row" style="line-height:15px;">
+			<div class="col-xs-10" onclick="location='order-detail.html'">
+				<div class="row">
+					<div class="col-xs-3">
+						<span class="text-success">-4.8元</span>
+					</div>
+					<div class="col-xs-3">
+						<span class="">权益:43.50元</span>
+					</div>
+					<div class="col-xs-3">
+						<span class="">5手买涨</span>
+					</div>
+					<div class="col-xs-3">
+						<!--<div class="row">-->
+						<!--<div class="col-xs-12">-->
+						<!--150g银-->
+						<!--</div>-->
+						<!--</div>-->
+						<!--<div class="row">-->
+						<!--<div class="col-xs-12">-->
+						<!--2770-->
+						<!--</div>-->
+						<!--</div>-->
+						<span class="">150g银 <br/> 2770</span>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-2">
+				<a href="#" class="btn bg-orange btn-group-justified text-white" data-toggle="modal"
+					 data-target="#transfer">转让</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!--转让确认-->
+<div class="modal fade" id="transfer">
+	<div class="modal-dialog">
+		<div class="modal-content  text-center">
+			<div class="modal-header">
+				<h2 class="dotted-line">确认结束交易</h2>
+				<p><strong>1桶原油</strong>(<strong>9</strong>元)</p>
+				<p>218.4 1手 买跌</p>
+			</div>
+			<div class="modal-body">
+				<div class="btn-group btn-group-justified">
+					<a href="#" class="btn" data-dismiss="modal">取消</a>
+					<a href="#" class="btn" data-dismiss="modal">确定</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 
 <!-- 侧边导航 -->
 <div class="slide-mask"></div>
 <aside class="slide-wrapper">
-	<div class="am-menu-nav">
-		<ul class="list-unstyled">
-			<li><img	src="img/0"	class="am-icon-btn" ></li>
-			<li><a href="#">首页</a></li>
-			<li><a href="#">充值</a></li>
-			<li><a href="#">提现</a></li>
-			<li><a href="#">订单列表</a></li>
-			<li><a href="#">交易历史</a></li>
-			<li><a href="#">排行榜</a></li>
-			<li><a href="#">收支明细</a></li>
-			<li><a href="#">个人信息</a></li>
-			<li><a href="#">交易规则</a></li>
-		</ul>
-	</div>
 </aside>
 
+<!--提示框-->
+<div class="modal fade" id="alert-box">
+	<div class="modal-dialog">
+		<div class="modal-content  text-center">
+			<div class="modal-header">
+				<p class="text-orange">力雅商品</p>
 
+				<p>下单成功</p>
+			</div>
+			<div class="modal-body">
+				<a href="#" data-dismiss="modal">确定</a>
+			</div>
+		</div>
+	</div>
+</div>
 <script src="js/jquery-1.11.3.js"></script>
 <script src="js/bootstrap.js"></script>
+<script src="https://code.highcharts.com/stock/highstock.js"></script>
+<script src="https://code.highcharts.com/stock/modules/exporting.js"></script>
+<script src="js/liyawei.js"></script>
+<script>
+	$(function () {
+				$("aside[class*=slide-wrapper]").load('aside.html', function () {
+					var s = document.createElement("script");
+					s.src = "js/aside.js";
+					document.body.appendChild(s)
+				});
+			}
+	)
+</script>
 <script>
 	(function () {
 		var s = document.createElement("script");
@@ -203,190 +486,6 @@
 		s.src = "js/bootlint.js";
 		document.body.appendChild(s)
 	})();
-</script>
-<script src="https://code.highcharts.com/stock/highstock.js"></script>
-<script src="https://code.highcharts.com/stock/modules/exporting.js"></script>
-
-<script type="text/javascript">
-	$(function () {
-		/**/
-		$('aside.slide-wrapper').on('touchstart', 'li', function (e) {
-			$(this).addClass('current').siblings('li').removeClass('current');
-		});
-
-		$('a.slide-menu').on('click', function (e) {
-			var wh = $('div.wrapperhove' + 'rtree').height();
-			$('div.slide-mask').css('height', wh).show();
-			$('aside.slide-wrapper').css('height', wh).addClass('moved');
-		});
-
-		$('div.slide-mask').on('click', function () {
-			$('div.slide-mask').hide();
-			$('aside.slide-wrapper').removeClass('moved');
-		});
-
-	/**/
-	var orgHighchartsRangeSelectorPrototypeRender = Highcharts.RangeSelector.prototype.render;
-	Highcharts.RangeSelector.prototype.render = (function (func) {
-		return function () {
-			func.apply(this, arguments);
-			var leftPosition = this.chart.plotLeft,
-			//topPosition = this.chart.plotHeight + this.chart.plotTop ,
-					topPosition = this.chart.containerHeight,// - this.chart.plotTop,
-					space = 2;
-//			console.log(this.chart, topPosition);
-			this.zoomText.attr({
-				x: leftPosition,
-				y: topPosition + 15
-			});
-			leftPosition += this.zoomText.getBBox().width;
-			for (var i = 0; i < this.buttons.length; i++) {
-				this.buttons[i].attr({
-					x: leftPosition,
-					y: topPosition
-				});
-				leftPosition += this.buttons[i].width + space;
-			}
-		}
-	}(Highcharts.RangeSelector.prototype.render));
-
-
-	//$.getJSON('https://www.highcharts.com/samples/data/jsonp.php?filename=aapl-c.json&callback=?', function (data) {
-	data = [
-		[Date.UTC(2015, 11, 24, 14, 55), 230.6],
-		[Date.UTC(2015, 11, 24, 14, 57), 230.2],
-		[Date.UTC(2015, 11, 24, 15, 1), 231.3],
-		[Date.UTC(2015, 11, 24, 15, 5), 231.8],
-		[Date.UTC(2015, 11, 24, 15, 7, 1), 231.3],
-		[Date.UTC(2015, 11, 24, 15, 7, 3), 231.9],
-		[Date.UTC(2015, 11, 24, 15, 7, 37), 231.9],
-		[Date.UTC(2015, 11, 24, 15, 7, 55), 231.9],
-		[Date.UTC(2015, 11, 24, 15, 8, 3), 231.9],
-		[Date.UTC(2015, 11, 24, 15, 10), 231.8],
-		[Date.UTC(2015, 11, 24, 15, 11), 232.1],
-		[Date.UTC(2015, 11, 24, 15, 12), 232.2],
-		[Date.UTC(2015, 11, 24, 15, 13), 232.3]
-	];
-	// Create the chart
-	$('#container').highcharts('StockChart', {
-		credits: {
-			enabled: false
-		},
-		navigator: {
-			enabled: false
-		},
-		scrollbar: {
-			enabled: false
-		},
-		exporting: {
-			enabled: false
-		},
-		rangeSelector: {
-			allButtonsEnabled: true,
-			buttonSpacing: 0,
-			buttonTheme: { // styles for the buttons
-				fill: 'none',
-				stroke: 'none',
-				'stroke-width': 0,
-				r: 0,
-				width: 50,
-				height: 18,
-				padding: 7,
-				style: {
-					fill: '#3F94B9'
-				},
-				states: {
-					hover: {},
-					select: {
-						fill: '#3F94B9',
-						style: {
-							color: 'white'
-						}
-					}
-				}
-			},
-			buttons: [{
-				type: 'minute',
-				count: 30,
-				text: '分时线'
-			}, {
-				type: 'minute',
-				count: 5,
-				text: '5分钟'
-			}, {
-				type: 'minute',
-				count: 10,
-				text: '10分钟'
-			}, {
-				type: 'minute',
-				count: 30,
-				text: '30分钟'
-			}, {
-				type: 'minute',
-				count: 60,
-				text: '1小时'
-			}, {
-				type: 'all',
-				text: '日K线'
-			}],
-			labelStyle: {
-				color: 'white',
-			},
-			inputEnabled: false,
-			selected: 0
-		},
-
-		title: {
-			text: ''
-		},
-		subtitle: {
-			text: '<span>最高: 232.6  昨收：231.06</span><br><span>最低: 227.5  今开：231.00</span>',
-			align: 'right',
-			style: {
-				color: '#3F94B9'
-			},
-			useHtml: true,
-		},
-		series: [{
-			name: 'USOil',
-			data: data
-		}],
-		tooltip: {
-//						valueDecimals: 2,
-//						xDateFormat: '%Y-%m-%d %H:%M',
-			formatter: function () {
-				var s = '<b>' + Highcharts.dateFormat('%Y-%m-%d %H:%M', this.x) + '</b>';
-
-				$.each(this.points, function () {
-					s += '<br/>' + this.series.name + ":" + this.y + ' 元';
-				});
-
-				return s;
-			}
-		},
-		xAxis: {
-			dateTimeLabelFormats: {
-				second: '%H:%M',
-				minute: '%H:%M',
-				hour: '%H:%M',
-				day: '%m-%d',
-			},
-//						tickPositions: []
-			lineColor: "#011"
-		},
-		yAxis: {
-			gridLineWidth: 1,
-			opposite: false,
-			lineWidth: 1,
-			lineColor: "#011"
-		}
-	});
-	}
-	)
-	;
-
-	//});
-
 </script>
 </body>
 </html>
