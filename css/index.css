@@ -1,6 +1,6 @@
 body {
   /*margin-top: 130px;*/
-  margin-bottom: 80px;
+  padding-top: 100px;
 }
 
 img {
@@ -11,8 +11,8 @@ img {
   font-size: .875rem
 }
 
-.f-big {
-  font-size: 200%;
+.am-text-lg {
+  font-size: 1.8rem;
 }
 
 .dotted-line {
@@ -35,20 +35,12 @@ img {
   border-radius: 50%;
 }
 
-/*header {*/
-/*margin-bottom: 5px;*/
-/*}*/
-
 .am-row {
   margin: 10px 0;
 }
 
 .am-row:before,
-.am-row:after {
-  content: " ";
-  display: table;
-}
-
+.am-row:after,
 .am-nav-bg {
   background-color: #FE0101;
 }
@@ -73,6 +65,19 @@ img {
   right: 0;
   width: 100%;
   z-index: 1030;
+}
+
+.showed {
+  top: 0;
+  z-index: 1009;
+}
+
+.hiddened {
+  top: -49px !important;
+}
+
+.am-header-default {
+  background: #e5e5e5;
 }
 
 .am-header-nav {
@@ -171,11 +176,12 @@ img {
 
 aside.slide-wrapper {
   position: fixed;
-  z-index: 4;
+  z-index: 1145;
   left: 0;
   top: 0;
   bottom: 0;
   width: 40%;
+  width: 170px;
   max-width: 100%;
   -webkit-transform: translate3d(-100%, 0, 0);
   -moz-transform: translate3d(-100%, 0, 0);
@@ -275,7 +281,7 @@ aside.slide-wrapper li.current > a {
   font-size: 1.2em;
 }
 
-.am-g {
+.am-jy-bg {
   background-color: #F3F3F3;
   border-bottom: 1px solid #fff;
 }
@@ -339,6 +345,50 @@ aside.slide-wrapper li.current > a {
 
 .am-list-news {
   margin: 10px 10px 0px 10px;
+}
+
+/*首页底部的 已购买订单 */
+
+.zhuanrang-rootPop {
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  position: fixed;
+  z-index: 1000;
+}
+
+.zhuanrang-rootPop:before {
+  clear: both;
+}
+
+.zhuanrang-rootPop .zhuanrang-rootPop-Left {
+  height: 41px;
+  background: #000;
+}
+
+.zhuanrang-rootPop .am-btn {
+  height: 41px;
+}
+
+.zhuanrang-rootPop-Left span {
+  height: 41px;
+  line-height: 41px;
+  display: inline-block;
+  vertical-align: top;
+  font-size: 10px;
+}
+
+.zhuanrang-rootPop-Left span:last-child {
+  line-height: 1.9;
+  text-align: center;
+  color: #fff;
+  background-color: #5a5a5a;
+}
+
+.am-btn-warning {
+  color: #fff;
+  background-color: #f37b1d;
+  border-color: #f37b1d;
 }
 
 /*order-list*/

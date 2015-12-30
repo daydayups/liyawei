@@ -18,15 +18,5 @@ $(function () {
       $('aside.slide-wrapper').removeClass('moved');
     });
 
-    $('#stock-tend').on('click', function () {
-      var e = window.event || arguments[0];
-      var src = e.srcElement || e.target;
-      if (src.nodeName == "INPUT") {
-        console.log(src,src.value);
-        $(src).parent().siblings().removeClass('am-active');
-        $(src).parent().addClass('am-active');
-        containerPain('', src.value);
-      }
-    })
   }
 )
