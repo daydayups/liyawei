@@ -3,7 +3,12 @@
  */
 
 $(function () {
-// 顶部底部隐藏事件
+
+    // 距顶部
+    var navbarTH = $(".am-header-fixed").height();
+    $(".main").css("margin-top", navbarTH);
+
+    // 顶部底部隐藏事件
     var winHeight = $(document).scrollTop();
     $(window).scroll(function () {
       var scrollY = $(document).scrollTop(); // 获取垂直滚动的距离，即滚动了多少
