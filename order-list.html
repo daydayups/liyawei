@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>order-list</title>
+	<link href="css/bootstrap.css" rel="stylesheet">
+	<link href="css/index.css" rel="stylesheet">
+	<!--[if lt IE 9]>
+	<script src="js/html5shiv.min.js"></script>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+	<style>
+		table tbody tr:nth-child(even) {
+			background-color: #d9edf7;
+		}
+
+		table tbody tr:nth-child(odd) {
+			background-color: #f2dede;
+		}
+	</style>
+</head>
+<body>
+<header id="header"></header>
+<div class="table-responsive">
+	<table class="table ">
+		<thead>
+		<tr>
+			<th>交易日期</th>
+			<th>商品名称</th>
+			<th>操作</th>
+			<th>点位</th>
+		</tr>
+		</thead>
+		<tbody>
+		<tr onclick="location='order-detail.html'">
+			<td>2015-12-29</td>
+			<td>150g银</td>
+			<td>1手 <span class="text-danger">买涨</span></td>
+			<td><span class="text-danger">2762.0</span></td>
+		</tr>
+		<tr>
+			<td>2015-12-29</td>
+			<td>150g银</td>
+			<td>1手 <span class="text-danger">买涨</span></td>
+			<td><span class="text-danger">2762.0</span></td>
+		</tr>
+		<tr>
+			<td>2015-12-29</td>
+			<td>150g银</td>
+			<td>1手 <span class="text-danger">买涨</span></td>
+			<td><span class="text-danger">2762.0</span></td>
+		</tr>
+		<tr>
+			<td>2015-12-29</td>
+			<td>150g银</td>
+			<td>1手 <span class="text-danger">买涨</span></td>
+			<td><span class="text-danger">2762.0</span></td>
+		</tr>
+		</tbody>
+	</table>
+</div>
+
+<div class="slide-mask"></div>
+<aside class="slide-wrapper">
+</aside>
+
+<script src="js/jquery-1.11.3.js"></script>
+<script src="js/bootstrap.js"></script>
+<script>
+	$(function () {
+				$("#header").load('header.html', function () {
+					$('b[class*=am-header-title]').html('订单列表');
+					$("aside[class*=slide-wrapper]").load('aside.html', function () {
+						var s = document.createElement("script");
+						s.src = "js/aside.js";
+						document.body.appendChild(s)
+					});
+				});
+			}
+	)
+</script>
+</body>
+</html>

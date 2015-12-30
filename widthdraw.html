@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>提现</title>
+	<link href="css/bootstrap.css" rel="stylesheet">
+	<link href="css/index.css" rel="stylesheet">
+	<!--[if lt IE 9]>
+	<script src="js/html5shiv.min.js"></script>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+</head>
+<body>
+<div class="container">
+
+	<div class="panel panel-default">
+		<div class="panel-heading">提现</div>
+
+		<ul class="list-group">
+			<form action="">
+				<li class="list-group-item">
+					<div class="row">
+						<div class="col-xs-4">姓名</div>
+						<div class="col-xs-8">xxdx</div>
+					</div>
+				</li>
+				<li class="list-group-item">
+					<div class="row">
+						<div class="col-xs-4">银行账号</div>
+						<div class="col-xs-8">1230(3234)</div>
+					</div>
+				</li>
+				<li class="list-group-item">
+					<div class="row">
+						<div class="col-xs-4">账户金额</div>
+						<div class="col-xs-8">100000.00元</div>
+					</div>
+				</li>
+				<li class="list-group-item">
+					<div class="row">
+						<div class="col-xs-4">赠金</div>
+						<div class="col-xs-8">100000.00</div>
+					</div>
+				</li>
+				<li class="list-group-item">
+					<div class="row">
+						<div class="col-xs-4">可提金额</div>
+						<div class="col-xs-8">0</div>
+					</div>
+				</li>
+				<li class="list-group-item">
+					<div class="row">
+						<div class="col-xs-4">提现金额</div>
+						<div class="col-xs-8">
+							<label for="old-pwd" class="sr-only">提现金额</label>
+							<input id="old-pwd" type="text" class="form-control " placeholder="最多2位小数">
+						</div>
+					</div>
+				</li>
+				<li class="list-group-item">
+					<div class="row">
+						<div class="col-xs-4">交易密码</div>
+						<div class="col-xs-8">
+							<label for="pwd" class="sr-only">交易密码</label>
+							<input id="pwd" type="text" class="form-control ">
+						</div>
+					</div>
+				</li>
+				<li class="list-group-item">
+					<div class="row">
+						<div class="col-xs-4">验证码</div>
+						<div class="col-xs-4">
+							<label for="check-code" class="sr-only">验证码</label>
+							<input id="check-code" type="text" class="form-control ">
+						</div>
+						<div class="col-xs-4">
+							<img src="" alt="83mt"/>
+							<a href="#">看不清</a>
+						</div>
+					</div>
+				</li>
+			</form>
+		</ul>
+		<div class="panel-body">
+			<a href="#" class="btn btn-warning btn-group-justified">确认</a>
+			<br/>
+			<a href="#" class="btn btn-success btn-group-justified" data-toggle="modal"
+				 data-target="#unbind">解绑</a>
+		</div>
+	</div>
+	<div class="modal fade" id="unbind">
+		<div class="modal-dialog">
+			<div class="modal-content  text-center">
+				<div class="modal-header">
+					<p>确认解绑?</p>
+				</div>
+				<div class="modal-body">
+					<b>解绑需要管理员确认，请在微信界面与客服联系</b>
+				</div>
+				<div class="modal-footer">
+					<div class="btn-group btn-group-justified">
+						<a class="btn btn-default" href="#" data-dismiss="modal">取消
+						</a>
+						<a class="btn btn-default" href="#">确定
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+<script src="js/jquery-1.11.3.js"></script>
+<script src="js/bootstrap.js"></script>
+</html>

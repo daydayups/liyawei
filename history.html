@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>order-list</title>
+	<link href="css/bootstrap.css" rel="stylesheet">
+	<link href="css/index.css" rel="stylesheet">
+	<!--[if lt IE 9]>
+	<script src="js/html5shiv.min.js"></script>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+	<style>
+		table tbody tr:nth-child(even) {
+			background-color: #d9edf7;
+		}
+
+		table tbody tr:nth-child(odd) {
+			background-color: #f2dede;
+		}
+	</style>
+</head>
+<body>
+<header id="header"></header>
+<div class="container text-center">
+	<h2 class="">总盈亏：<span class="text-danger">4.97</span></h2>
+
+	<div class="row">
+		<div class="col-xs-2 col-xs-offset-7 ">
+			总单数
+		</div>
+		<div class="col-xs-2 col-xs-offset-1 ">
+			总手数
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-2 col-xs-offset-7 ">
+			4
+		</div>
+		<div class="col-xs-2 col-xs-offset-1 ">
+			4
+		</div>
+	</div>
+
+	<div class="row am-row table-responsive">
+		<table class="table">
+			<tbody>
+			<tr onclick="location='order-detail.html'">
+				<td>2015-12-29</td>
+				<td>150g银</td>
+				<td>1手 <span class="text-danger">买涨</span></td>
+				<td><span class="text-danger">1.2</span></td>
+			</tr>
+			<tr>
+				<td>2015-12-29</td>
+				<td>150g银</td>
+				<td>1手 <span class="text-danger">买涨</span></td>
+				<td><span class="text-danger">2.4</span></td>
+			</tr>
+			<tr>
+				<td>2015-12-29</td>
+				<td>150g银</td>
+				<td>1手 <span class="text-danger">买涨</span></td>
+				<td><span class="text-danger">1.5</span></td>
+			</tr>
+			<tr>
+				<td>2015-12-29</td>
+				<td>10kg铜</td>
+				<td>1手 <span class="text-success">买跌</span></td>
+				<td><span class="text-success">-0.13</span></td>
+			</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+
+<div class="slide-mask"></div>
+<aside class="slide-wrapper">
+</aside>
+
+<script src="js/jquery-1.11.3.js"></script>
+<script src="js/bootstrap.js"></script>
+<script>
+	$(function () {
+				$("#header").load('header.html', function () {
+					$('b[class*=am-header-title]').html('交易历史');
+					$("aside[class*=slide-wrapper]").load('aside.html', function () {
+						var s = document.createElement("script");
+						s.src = "js/aside.js";
+						document.body.appendChild(s)
+					});
+				});
+			}
+	)
+</script>
+</body>
+</html>

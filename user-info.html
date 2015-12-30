@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>order-list</title>
+	<link href="css/bootstrap.css" rel="stylesheet">
+	<link href="css/index.css" rel="stylesheet">
+	<!--[if lt IE 9]>
+	<script src="js/html5shiv.min.js"></script>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+</head>
+<body>
+<header id="header"></header>
+<div class="container" id="main">
+	<div class="am-group">
+		<div class="am-group-item bg-danger">头像
+			<img src="img/0" class="am-icon-btn pull-right" style="width: 35px; height: 35px; margin-top: -8px; "/>
+		</div>
+		<div class="am-group-item bg-danger">用户名 <span class="text-danger pull-right">xxxdfL</span></div>
+	</div>
+
+	<div class="am-group">
+		<div class="am-group-item bg-danger">性别</div>
+		<div class="am-group-item bg-danger">手机 <span class="text-danger pull-right">1331234567</span></div>
+	</div>
+
+	<div class="am-group">
+		<div class="am-group-item bg-danger">二维码 <a href="register.html" class="pull-right">点击申请成为经纪人</a></div>
+		<div class="am-group-item bg-danger">修改密码 <span
+				class="glyphicon glyphicon-chevron-right pull-right text-white" data-toggle="modal"
+				data-target="#modify-pwd"></span></div>
+	</div>
+</div>
+<!--弹出框-->
+<div class="modal fade" id="modify-pwd">
+	<div class="modal-dialog">
+		<div class="modal-content  text-center">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+						aria-hidden="true">&times;</span></button>
+				<p>修改密码</p>
+
+				<form action="">
+					<div class="form-group">
+						<label for="old-pwd" class="sr-only">请输入旧密码</label>
+						<input id="old-pwd" type="text" class="form-control" placeholder="请输入旧密码">
+					</div>
+					<div class="form-group">
+						<label for="pwd" class="sr-only">请输入新密码</label>
+						<input id="pwd" type="text" class="form-control" placeholder="请输入新密码">
+					</div>
+					<div class="form-group">
+						<label for="pwd2" class="sr-only">请再次输入确认新密码</label>
+						<input id="pwd2" type="text" class="form-control" placeholder="请再次输入确认新密码">
+					</div>
+				</form>
+			</div>
+			<div class="modal-body">
+				<div class="btn-group btn-group-justified">
+					<a class="btn btn-default" href="#" data-dismiss="modal">取消
+					</a>
+					<a class="btn btn-default" href="#">确定
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="slide-mask"></div>
+<aside class="slide-wrapper">
+</aside>
+<script src="js/jquery-1.11.3.js"></script>
+<script src="js/bootstrap.js"></script>
+<script>
+	$(function () {
+				$("#header").load('header.html', function () {
+					$('b[class*=am-header-title]').html('个人信息');
+					$("aside[class*=slide-wrapper]").load('aside.html', function () {
+						var s = document.createElement("script");
+						s.src = "js/aside.js";
+						document.body.appendChild(s)
+					});
+				});
+			}
+	)
+</script>
+</body>
+</html>
