@@ -12,7 +12,6 @@ $(function () {
     var winHeight = $(document).scrollTop();
     $(window).scroll(function () {
       var scrollY = $(document).scrollTop(); // 获取垂直滚动的距离，即滚动了多少
-
       if (scrollY > 100) { //如果滚动距离大于550px则隐藏，否则删除隐藏类
         $('.am-header-fixed').addClass('hiddened');
       } else {
@@ -40,7 +39,6 @@ $(function () {
       var e = window.event || arguments[0];
       var src = e.srcElement || e.target;
       if (src.nodeName == "INPUT") {
-        //console.log(src,src.value);
         $(src).parent().siblings().removeClass('am-active');
         $(src).parent().addClass('am-active');
         containerPain('', src.value);
@@ -50,13 +48,23 @@ $(function () {
       var e = window.event || arguments[0];
       var src = e.srcElement || e.target;
       if (src.nodeName == "INPUT") {
-        //console.log(src,src.value);
         $(src).parent().siblings().removeClass('am-active');
         $(src).parent().addClass('am-active');
         containerPain(src.value, '');
       }
     })
 
+    //chooseNum switch
+    $('.modal-body .chooseNum .btn-group>.btn').on('click', function () {
+      var e = window.event || arguments[0];
+      var src = e.srcElement || e.target;
+      if (src.nodeName == "SPAN") {
+        $(src).parent().parent().find('div span[class*="btn-orange"]').removeClass('btn-orange');
+        $(src).parent().parent().find('div span[class*="btn-orange"]').addClass('btn-default')
+        $(src).removeClass('btn-default');
+        $(src).addClass('btn-orange');
+      }
+    });
     containerPain('', 'M1');
     initOrderList();
   }

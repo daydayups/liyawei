@@ -235,7 +235,7 @@
 			<label class="btn am-btn ">
 				<input type="radio" name="options" value="H1" id="option5"> 1小时
 			</label>
-			<label class="btn am-btn ">
+			<label class="btn am-btn">
 				<input type="radio" name="options" value="D1" id="option6">日k线
 			</label>
 		</div>
@@ -262,12 +262,14 @@
 				</button>
 				订立合同确认
 			</div>
-			<div class="modal-body chooseNum">
-				<div class="btn-group btn-group-justified">
-					<a href="#" class="btn btn-orange">1</a>
-					<a href="#" class="btn btn-default">2</a>
-					<a href="#" class="btn btn-default">5</a>
-					<a href="#" class="btn btn-default">10</a>
+			<div class="modal-body">
+				<div class="chooseNum">
+					<div class="btn-group btn-group-justified">
+						<span class="btn btn-orange">1</span>
+						<span class="btn btn-default">2</span>
+						<span class="btn btn-default">5</span>
+						<span class="btn btn-default">10</span>
+					</div>
 				</div>
 				<div class="dashed-line am-padding-vertical-sm am-margin-vertical-sm">
 					<span class="text-danger am-text-lg">
@@ -278,8 +280,10 @@
 					</span>
 				</div>
 				<div class="">
-					<p>价格：<label>226.27</label> </p>
-					<p>方向：<span class="text-danger">买涨</span> </p>
+					<p>价格：<label>226.27</label></p>
+
+					<p>方向：<span class="text-danger">买涨</span></p>
+
 					<p>1桶原油</p>
 				</div>
 				<div class="btn-group btn-group-justified">
@@ -317,18 +321,18 @@
 							<div class="col-xs-2">止盈</div>
 							<div class="col-xs-10">
 								<div class="btn-group btn-group-justified">
-									<a href="#" class="btn btn-orange">不设</a>
-									<a href="#" class="btn btn-default">10%</a>
-									<a href="#" class="btn btn-default">20%</a>
-									<a href="#" class="btn btn-default">30%</a>
-									<a href="#" class="btn btn-default">40%</a>
+									<span class="btn btn-orange">不设</span>
+									<span class="btn btn-default">10%</span>
+									<span class="btn btn-default">20%</span>
+									<span class="btn btn-default">30%</span>
+									<span class="btn btn-default">40%</span>
 								</div>
 								<div class="btn-group btn-group-justified">
-									<a href="#" class="btn btn-default">50%</a>
-									<a href="#" class="btn btn-default">60%</a>
-									<a href="#" class="btn btn-default">70%</a>
-									<a href="#" class="btn btn-default">80%</a>
-									<a href="#" class="btn btn-default">90%</a>
+									<span class="btn btn-default">50%</span>
+									<span class="btn btn-default">60%</span>
+									<span class="btn btn-default">70%</span>
+									<span class="btn btn-default">80%</span>
+									<span class="btn btn-default">90%</span>
 								</div>
 							</div>
 						</div>
@@ -336,18 +340,18 @@
 							<div class="col-xs-2">止损</div>
 							<div class="col-xs-10">
 								<div class="btn-group btn-group-justified">
-									<a href="#" class="btn btn-orange">不设</a>
-									<a href="#" class="btn btn-default">10%</a>
-									<a href="#" class="btn btn-default">20%</a>
-									<a href="#" class="btn btn-default">30%</a>
-									<a href="#" class="btn btn-default">40%</a>
+									<span class="btn btn-orange">不设</span>
+									<span class="btn btn-default">10%</span>
+									<span class="btn btn-default">20%</span>
+									<span class="btn btn-default">30%</span>
+									<span class="btn btn-default">40%</span>
 								</div>
 								<div class="btn-group btn-group-justified">
-									<a href="#" class="btn btn-default">50%</a>
-									<a href="#" class="btn btn-default">60%</a>
-									<a href="#" class="btn btn-default">70%</a>
-									<a href="#" class="btn btn-default">80%</a>
-									<a href="#" class="btn btn-default">90%</a>
+									<span class="btn btn-default">50%</span>
+									<span class="btn btn-default">60%</span>
+									<span class="btn btn-default">70%</span>
+									<span class="btn btn-default">80%</span>
+									<span class="btn btn-default">90%</span>
 								</div>
 							</div>
 						</div>
@@ -408,6 +412,7 @@
 		<div class="modal-content  text-center">
 			<div class="modal-body">
 				<h2>确认结束交易</h2>
+
 				<div class="dashed-line am-padding-vertical-sm am-margin-vertical-sm">
 					<p><strong>1桶原油</strong>(<strong>9</strong>元)</p>
 
@@ -415,7 +420,8 @@
 				</div>
 				<div class="btn-group btn-group-justified">
 					<a href="#" class="btn" data-dismiss="modal">取消</a>
-					<a href="#" class="btn" data-dismiss="modal" onclick="$('[class=am-modal-bd]').html('结束成功');$('#alert-box').modal('show')" >确定</a>
+					<a href="#" class="btn" data-dismiss="modal"
+						 onclick="$('[class=am-modal-bd]').html('结束成功');$('#alert-box').modal('show')">确定</a>
 				</div>
 			</div>
 		</div>
