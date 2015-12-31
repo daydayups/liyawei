@@ -43,7 +43,7 @@
 				<input type="type" class="form-control" id="check-code" placeholder="验证码">
 			</div>
 			<div class="col-xs-4 col-sm-4">
-				<a href="#" class="btn btn-danger ">获取验证码</a>
+				<a href="#" class="btn btn-danger" onclick="$('[class=am-modal-bd]').html('请输入正确格式的手机号');$('#alert-box').modal('show')">获取验证码</a>
 			</div>
 		</div>
 		<div class="form-group">
@@ -55,10 +55,23 @@
 		</div>
 		<div class="form-group">
 			<div class="col-xs-offset-1 col-xs-10">
-				<a href="#" class="btn btn-warning btn-group-justified">提交申请</a>
+				<a href="#" class="btn btn-warning btn-group-justified" onclick="$('[class=am-modal-bd]').html('提示信息');$('#alert-box').modal('show')">
+					提交申请</a>
 			</div>
 		</div>
 	</form>
 </div>
+<!--弹出框-->
+<div class="modal fade" id="alert-box"></div>
+<script src="js/jquery-1.11.3.js"></script>
+<script src="js/bootstrap.js"></script>
+<script>
+	$(function () {
+				$("#alert-box").load('alert-dialog.html', function () {
+//					$('[class=am-modal-bd]').html('错误信息')
+				});
+			}
+	)
+</script>
 </body>
 </html>

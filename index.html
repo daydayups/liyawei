@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>力雅微</title>
+	<title>微盘demo</title>
 	<link href="css/bootstrap.css" rel="stylesheet">
 	<link href="css/index.css" rel="stylesheet">
 	<!--[if lt IE 9]>
@@ -25,11 +25,11 @@
 		<div class="am-header-nav pull-left ">
 			<img src="img/0" class="am-icon-btn" style="width:35px; height:35px;margin-top: 0">
 			余额(元):
-			<label id="myMoney">
+			<label>
 				100000.00
 			</label>
 			<a href="#">
-				<button type="button" class="btn btn-danger btn-sm bg-orange">充值
+				<button type="button" class="btn btn-orange btn-sm" onclick="location='payin.html'">充值
 				</button>
 			</a>
 		</div>
@@ -77,8 +77,7 @@
 
 		<div class="row am-jy-bg" id="Copper_1000kg">
 			<div class="col-xs-2">
-				<a href="#" class="am-btn buy-increase text-white " data-toggle="modal"
-					 data-target="#contract">买涨</a>
+				<span class="am-btn buy-increase text-white" data-toggle="modal" data-target="#contract">买涨</span>
 			</div>
 			<div class="col-xs-8">
 				<div class="row">
@@ -93,14 +92,13 @@
 				</div>
 			</div>
 			<div class="col-xs-2">
-				<a href="#" class="am-btn buy-decrease text-white " data-toggle="modal"
-					 data-target="#contract">买跌</a>
+				<span class="am-btn buy-decrease text-white" data-toggle="modal" data-target="#contract">买跌</span>
 			</div>
 
 		</div>
 		<div class="row am-jy-bg" id="Copper_100kg">
 			<div class="col-xs-2">
-				<a href="#" class="am-btn buy-increase text-white ">买涨</a>
+				<span class="am-btn buy-increase text-white" data-toggle="modal" data-target="#contract">买涨</span>
 			</div>
 			<div class="col-xs-8">
 				<div class="row">
@@ -115,12 +113,12 @@
 				</div>
 			</div>
 			<div class="col-xs-2">
-				<a href="#" class="am-btn buy-decrease text-white ">买跌</a>
+				<span class="am-btn buy-decrease text-white" data-toggle="modal" data-target="#contract">买跌</span>
 			</div>
 		</div>
 		<div class="row am-jy-bg" id="Copper_10kg">
 			<div class="col-xs-2">
-				<a href="#" class="am-btn buy-increase text-white ">买涨</a>
+				<span class="am-btn buy-increase text-white" data-toggle="modal" data-target="#contract">买涨</span>
 			</div>
 			<div class="col-xs-8">
 				<div class="row">
@@ -135,13 +133,13 @@
 				</div>
 			</div>
 			<div class="col-xs-2">
-				<a href="#" class="am-btn buy-decrease text-white ">买跌</a>
+				<span class="am-btn buy-decrease text-white" data-toggle="modal" data-target="#contract">买跌</span>
 			</div>
 		</div>
 
 		<div class="row am-jy-bg">
 			<div class="col-xs-2">
-				<a href="#" class="am-btn buy-increase text-white ">买涨</a>
+				<span class="am-btn buy-increase text-white" data-toggle="modal" data-target="#contract">买涨</span>
 			</div>
 			<div class="col-xs-8">
 				<div class="row">
@@ -156,12 +154,12 @@
 				</div>
 			</div>
 			<div class="col-xs-2">
-				<a href="#" class="am-btn buy-decrease text-white ">买跌</a>
+				<span class="am-btn buy-decrease text-white" data-toggle="modal" data-target="#contract">买跌</span>
 			</div>
 		</div>
 		<div class="row am-jy-bg">
 			<div class="col-xs-2">
-				<a href="#" class="am-btn buy-increase text-white ">买涨</a>
+				<span class="am-btn buy-increase text-white">买涨</span>
 			</div>
 			<div class="col-xs-8">
 				<div class="row">
@@ -176,12 +174,12 @@
 				</div>
 			</div>
 			<div class="col-xs-2">
-				<a href="#" class="am-btn buy-decrease text-white ">买跌</a>
+				<span class="am-btn buy-decrease text-white">买跌</span>
 			</div>
 		</div>
 		<div class="row am-jy-bg">
 			<div class="col-xs-2">
-				<a href="#" class="am-btn buy-increase text-white ">买涨</a>
+				<span class="am-btn buy-increase text-white">买涨</span>
 			</div>
 			<div class="col-xs-8">
 				<div class="row">
@@ -196,7 +194,7 @@
 				</div>
 			</div>
 			<div class="col-xs-2">
-				<a href="#" class="am-btn buy-decrease text-white text-white ">买跌</a>
+				<span class="am-btn buy-decrease text-white">买跌</span>
 			</div>
 		</div>
 
@@ -204,20 +202,7 @@
 			<h4>行情走势</h4>
 		</div>
 
-		<!--<div class="row am-stock-title-bar">-->
-		<!--</div>-->
-		<!--<div class="btn-group btn-group-justified">-->
-			<!--<label class="btn am-btn container-code">-->
-				<!--Copper-->
-			<!--</label>-->
-			<!--<label class="btn am-btn am-active container-code">-->
-				<!--USOil-->
-			<!--</label>-->
-			<!--<label class="btn am-btn btn-default container-code">-->
-				<!--XAGUSD-->
-			<!--</label>-->
-		<!--</div>-->
-		<div class="btn-group btn-group-justified" >
+		<div class="btn-group btn-group-justified">
 			<label class="btn am-btn am-active container-code" onclick="containerPain('Copper','')">
 				<input type="radio" value="Copper">Copper
 			</label>
@@ -269,27 +254,33 @@
 </div>
 <!--订立合同确认 - 弹出框-->
 <div class="modal fade" id="contract">
-	<div class="modal-dialog">
+	<div class="modal-dialog am-modal">
 		<div class="modal-content">
-			<div class="modal-header text-center bg-danger">
-				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
-						aria-hidden="true">&times;</span></button>
+			<div class="modal-header am-modal-hd text-white">
+				<button type="button" class="close am-close am-close-spin" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
 				订立合同确认
 			</div>
-			<div class="modal-body">
+			<div class="modal-body chooseNum">
 				<div class="btn-group btn-group-justified">
-					<a href="#" class="btn btn-danger">1</a>
+					<a href="#" class="btn btn-orange">1</a>
 					<a href="#" class="btn btn-default">2</a>
 					<a href="#" class="btn btn-default">5</a>
 					<a href="#" class="btn btn-default">10</a>
 				</div>
-				<div class="dotted-line">
-					<span class="text-danger am-text-lg">9</span>元 <span class="text-muted">手续费0.81</span>
+				<div class="dashed-line am-padding-vertical-sm am-margin-vertical-sm">
+					<span class="text-danger am-text-lg">
+						<strong class="am-text-xxl">1000</strong>元
+					</span>
+					<span class="am-text-lg text-muted">
+						手续费<strong>90</strong>
+					</span>
 				</div>
-				<div class="dotted-line">
-					价格：226.27 <br/>
-					方向：<span class="text-danger">买涨</span> <br/>
-					1桶原油
+				<div class="">
+					<p>价格：<label>226.27</label> </p>
+					<p>方向：<span class="text-danger">买涨</span> </p>
+					<p>1桶原油</p>
 				</div>
 				<div class="btn-group btn-group-justified">
 					<a class="btn btn-warning" href="#" data-toggle="modal"
@@ -303,53 +294,61 @@
 
 <!--设置合同止损，并保存合同 - 弹出框-->
 <div class="modal fade" id="reset-stops">
-	<div class="modal-dialog">
+	<div class="modal-dialog am-modal">
 		<div class="modal-content">
-			<div class="modal-header text-center">
-				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
-						aria-hidden="true">&times;</span></button>
-				<p>信息修改</p>
+			<div class="modal-header am-modal-hd text-white">
+				<button type="button" class="close am-close am-close-spin" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				信息修改
 			</div>
 			<div class="modal-body">
 				<div class="container">
-					<div>
-						设置止盈/止损:
+					<div class="text-center">
+						<span>1000kg铜  10手  </span>
+						<span>28735</span>
+						<span class="text-danger">买跌</span>
 					</div>
-					<div class="row am-row">
-						<div class="col-xs-2">止盈</div>
-						<div class="col-xs-10">
-							<div class="btn-group btn-group-justified">
-								<a href="#" class="btn btn-danger">不设</a>
-								<a href="#" class="btn btn-default">10%</a>
-								<a href="#" class="btn btn-default">20%</a>
-								<a href="#" class="btn btn-default">30%</a>
-								<a href="#" class="btn btn-default">40%</a>
-							</div>
-							<div class="btn-group btn-group-justified">
-								<a href="#" class="btn btn-default">50%</a>
-								<a href="#" class="btn btn-default">60%</a>
-								<a href="#" class="btn btn-default">70%</a>
-								<a href="#" class="btn btn-default">80%</a>
-								<a href="#" class="btn btn-default">90%</a>
+					<div class="chooseNum dashed-line am-padding-vertical-sm am-margin-vertical-sm">
+						<div>
+							<strong>设置止盈/止损:</strong>
+						</div>
+						<div class="row am-row">
+							<div class="col-xs-2">止盈</div>
+							<div class="col-xs-10">
+								<div class="btn-group btn-group-justified">
+									<a href="#" class="btn btn-orange">不设</a>
+									<a href="#" class="btn btn-default">10%</a>
+									<a href="#" class="btn btn-default">20%</a>
+									<a href="#" class="btn btn-default">30%</a>
+									<a href="#" class="btn btn-default">40%</a>
+								</div>
+								<div class="btn-group btn-group-justified">
+									<a href="#" class="btn btn-default">50%</a>
+									<a href="#" class="btn btn-default">60%</a>
+									<a href="#" class="btn btn-default">70%</a>
+									<a href="#" class="btn btn-default">80%</a>
+									<a href="#" class="btn btn-default">90%</a>
+								</div>
 							</div>
 						</div>
-					</div>
-					<div class="row am-row">
-						<div class="col-xs-2">止损</div>
-						<div class="col-xs-10">
-							<div class="btn-group btn-group-justified">
-								<a href="#" class="btn btn-danger">不设</a>
-								<a href="#" class="btn btn-default">10%</a>
-								<a href="#" class="btn btn-default">20%</a>
-								<a href="#" class="btn btn-default">30%</a>
-								<a href="#" class="btn btn-default">40%</a>
-							</div>
-							<div class="btn-group btn-group-justified">
-								<a href="#" class="btn btn-default">50%</a>
-								<a href="#" class="btn btn-default">60%</a>
-								<a href="#" class="btn btn-default">70%</a>
-								<a href="#" class="btn btn-default">80%</a>
-								<a href="#" class="btn btn-default">90%</a>
+						<div class="row am-row">
+							<div class="col-xs-2">止损</div>
+							<div class="col-xs-10">
+								<div class="btn-group btn-group-justified">
+									<a href="#" class="btn btn-orange">不设</a>
+									<a href="#" class="btn btn-default">10%</a>
+									<a href="#" class="btn btn-default">20%</a>
+									<a href="#" class="btn btn-default">30%</a>
+									<a href="#" class="btn btn-default">40%</a>
+								</div>
+								<div class="btn-group btn-group-justified">
+									<a href="#" class="btn btn-default">50%</a>
+									<a href="#" class="btn btn-default">60%</a>
+									<a href="#" class="btn btn-default">70%</a>
+									<a href="#" class="btn btn-default">80%</a>
+									<a href="#" class="btn btn-default">90%</a>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -405,19 +404,18 @@
 
 <!--转让确认-->
 <div class="modal fade" id="transfer">
-	<div class="modal-dialog">
+	<div class="modal-dialog am-modal">
 		<div class="modal-content  text-center">
-			<div class="modal-header">
-				<h2 class="dotted-line">确认结束交易</h2>
-
-				<p><strong>1桶原油</strong>(<strong>9</strong>元)</p>
-
-				<p>218.4 1手 买跌</p>
-			</div>
 			<div class="modal-body">
+				<h2>确认结束交易</h2>
+				<div class="dashed-line am-padding-vertical-sm am-margin-vertical-sm">
+					<p><strong>1桶原油</strong>(<strong>9</strong>元)</p>
+
+					<p>218.4 1手 买跌</p>
+				</div>
 				<div class="btn-group btn-group-justified">
 					<a href="#" class="btn" data-dismiss="modal">取消</a>
-					<a href="#" class="btn" data-dismiss="modal">确定</a>
+					<a href="#" class="btn" data-dismiss="modal" onclick="$('[class=am-modal-bd]').html('结束成功');$('#alert-box').modal('show')" >确定</a>
 				</div>
 			</div>
 		</div>
@@ -431,14 +429,12 @@
 
 <!--提示框-->
 <div class="modal fade" id="alert-box">
-	<div class="modal-dialog">
-		<div class="modal-content  text-center">
-			<div class="modal-header">
-				<p class="text-orange">力雅商品</p>
+	<div class="modal-dialog am-modal am-modal-alert">
+		<div class="modal-content text-center">
+			<div class="modal-header am-modal-hd">
+				<div class="text-orange">力雅商品</div>
 
-				<p>下单成功</p>
-			</div>
-			<div class="modal-body">
+				<div class="am-modal-bd">下单成功</div>
 				<a href="#" data-dismiss="modal">确定</a>
 			</div>
 		</div>
@@ -455,6 +451,10 @@
 					var s = document.createElement("script");
 					s.src = "js/aside.js";
 					document.body.appendChild(s)
+				});
+
+				$("#alert-box").load('alert-dialog.html', function () {
+					$('[class=am-modal-bd]').html('下单成功')
 				});
 			}
 	)

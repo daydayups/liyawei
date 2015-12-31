@@ -48,7 +48,6 @@
 			2015年12月29日 14:50:59
 		</div>
 	</div>
-
 	<div class="row am-row">
 		<div class="col-xs-5 col-xs-offset-1">方向:
 			<span class="text-danger">买涨</span></div>
@@ -63,7 +62,6 @@
 			<a href="#" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#reset-stops">重置</a>
 		</div>
 	</div>
-
 	<div class="row am-row">
 		<div class="col-xs-6 col-xs-offset-1">入仓金额:
 			<span class="text-danger">45.0</span></div>
@@ -81,7 +79,6 @@
 			<span class="">43.95</span>元
 		</div>
 	</div>
-
 	<!-- -->
 	<div class="row am-row">
 		<div class="col-xs-10 col-xs-offset-1">
@@ -96,12 +93,10 @@
 				 data-target="#liquidate">我要平仓</a>
 		</div>
 	</div>
-
 </div>
-
 <!--确认平仓 - 弹出框-->
 <div class="modal fade" id="liquidate">
-	<div class="modal-dialog">
+	<div class="modal-dialog am-modal">
 		<div class="modal-content  text-center">
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
@@ -120,59 +115,62 @@
 </div>
 <!--重置止损 - 弹出框-->
 <div class="modal fade" id="reset-stops">
-	<div class="modal-dialog">
+	<div class="modal-dialog am-modal am-modal-normal">
 		<div class="modal-content">
-			<div class="modal-header text-center">
-				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
-						aria-hidden="true">&times;</span></button>
-				<p>信息修改</p>
+			<div class="modal-header am-modal-hd ">
+				<button type="button" class="close am-close am-close-spin" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				信息修改
 			</div>
-			<div class="modal-body">
+			<div class="modal-body am-modal-bd">
 				<div class="container">
-					<div>
-						设置止盈/止损:
-					</div>
-					<div class="row am-row">
-						<div class="col-xs-2">止盈</div>
-						<div class="col-xs-10">
-							<div class="btn-group btn-group-justified">
-								<a href="#" class="btn btn-danger">0%</a>
-								<a href="#" class="btn btn-default">10%</a>
-								<a href="#" class="btn btn-default">20%</a>
-								<a href="#" class="btn btn-default">30%</a>
-								<a href="#" class="btn btn-default">40%</a>
-							</div>
-							<div class="btn-group btn-group-justified">
-								<a href="#" class="btn btn-default">50%</a>
-								<a href="#" class="btn btn-default">60%</a>
-								<a href="#" class="btn btn-default">70%</a>
-								<a href="#" class="btn btn-default">80%</a>
-								<a href="#" class="btn btn-default">90%</a>
+					<div class="chooseNum">
+						<div class="text-left">
+							<strong>设置止盈/止损:</strong>
+						</div>
+						<div class="row am-row">
+							<div class="col-xs-2">止盈</div>
+							<div class="col-xs-10">
+								<div class="btn-group btn-group-justified">
+									<a href="#" class="btn btn-danger">0%</a>
+									<a href="#" class="btn btn-default">10%</a>
+									<a href="#" class="btn btn-default">20%</a>
+									<a href="#" class="btn btn-default">30%</a>
+									<a href="#" class="btn btn-default">40%</a>
+								</div>
+								<div class="btn-group btn-group-justified">
+									<a href="#" class="btn btn-default">50%</a>
+									<a href="#" class="btn btn-default">60%</a>
+									<a href="#" class="btn btn-default">70%</a>
+									<a href="#" class="btn btn-default">80%</a>
+									<a href="#" class="btn btn-default">90%</a>
+								</div>
 							</div>
 						</div>
-					</div>
-					<div class="row am-row">
-						<div class="col-xs-2">止损</div>
-						<div class="col-xs-10">
-							<div class="btn-group btn-group-justified">
-								<a href="#" class="btn btn-danger">0%</a>
-								<a href="#" class="btn btn-default">10%</a>
-								<a href="#" class="btn btn-default">20%</a>
-								<a href="#" class="btn btn-default">30%</a>
-								<a href="#" class="btn btn-default">40%</a>
-							</div>
-							<div class="btn-group btn-group-justified">
-								<a href="#" class="btn btn-default">50%</a>
-								<a href="#" class="btn btn-default">60%</a>
-								<a href="#" class="btn btn-default">70%</a>
-								<a href="#" class="btn btn-default">80%</a>
-								<a href="#" class="btn btn-default">90%</a>
+						<div class="row am-row">
+							<div class="col-xs-2">止损</div>
+							<div class="col-xs-10">
+								<div class="btn-group btn-group-justified">
+									<a href="#" class="btn btn-danger">0%</a>
+									<a href="#" class="btn btn-default">10%</a>
+									<a href="#" class="btn btn-default">20%</a>
+									<a href="#" class="btn btn-default">30%</a>
+									<a href="#" class="btn btn-default">40%</a>
+								</div>
+								<div class="btn-group btn-group-justified">
+									<a href="#" class="btn btn-default">50%</a>
+									<a href="#" class="btn btn-default">60%</a>
+									<a href="#" class="btn btn-default">70%</a>
+									<a href="#" class="btn btn-default">80%</a>
+									<a href="#" class="btn btn-default">90%</a>
+								</div>
 							</div>
 						</div>
 					</div>
 					<div class="btn-group btn-group-justified">
-						<a class="btn btn-warning" href="#" data-dismiss="modal" data-toggle="modal"
-							 data-target="#alert-box">保存并完成
+						<a class="btn btn-warning" href="#" data-toggle="modal"
+							 data-target="#alert-box" data-dismiss="modal">保存并完成
 						</a>
 					</div>
 				</div>
@@ -180,21 +178,7 @@
 		</div>
 	</div>
 </div>
-
-<div class="modal fade" id="alert-box">
-	<div class="modal-dialog">
-		<div class="modal-content  text-center">
-			<div class="modal-header">
-				<p class="text-orange">力雅商品</p>
-
-				<p>修改成功</p>
-			</div>
-			<div class="modal-body">
-				<a href="#" data-dismiss="modal">确定</a>
-			</div>
-		</div>
-	</div>
-</div>
+<div class="modal fade" id="alert-box"></div>
 <script src="js/jquery-1.11.3.js"></script>
 <script src="js/bootstrap.js"></script>
 <script>
@@ -202,6 +186,9 @@
 				$("#header").load('header.html', function () {
 					$('b[class*=am-header-title]').html('150g银');
 					$('div[class*=am-header-menu]').html('<a href="javascript:history.go(-1);"><span class="glyphicon glyphicon-chevron-left text-white"></span></a>');
+				});
+				$("#alert-box").load('alert-dialog.html', function () {
+					$('[class=am-modal-bd]').html('修改成功')
 				});
 			}
 	)

@@ -38,7 +38,6 @@
 			</li>
 		</ul>
 	</div>
-
 	<div class="panel panel-default">
 		<div class="panel-heading">充值金额</div>
 		<div class="panel-body">
@@ -78,37 +77,28 @@
 			</div>
 		</div>
 	</div>
-
 	<div class="panel panel-default">
 		<div class="panel-heading">选择充值方式</div>
 		<div class="panel-body">
 			<div style="width:30%; max-width:100%" class="am-row">
-				<img src="img/3rd-pay.png" class="img-responsive" />
+				<img src="img/3rd-pay.png" class="img-responsive"/>
 			</div>
-
 			<a href="#" class="btn btn-warning btn-group-justified" data-toggle="modal"
 				 data-target="#alert-box">确认</a>
 		</div>
 	</div>
 </div>
 <!--弹出框-->
-<div class="modal fade" id="alert-box">
-	<div class="modal-dialog">
-		<div class="modal-content  text-center">
-			<div class="modal-header">
-				<p class="text-orange">力雅商品</p>
-
-				<p>请输入正确充值金额</p>
-			</div>
-			<div class="modal-body">
-				<div class="btn-group btn-group-justified">
-					<a class=" " href="#" data-dismiss="modal">确定 </a>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
+<div class="modal fade" id="alert-box"></div>
 <script src="js/jquery-1.11.3.js"></script>
 <script src="js/bootstrap.js"></script>
+<script>
+	$(function () {
+				$("#alert-box").load('alert-dialog.html', function () {
+					$('[class=am-modal-bd]').html('请输入正确充值金额')
+				});
+			}
+	)
+</script>
 </body>
 </html>
