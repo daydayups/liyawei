@@ -133,18 +133,18 @@
 							<div class="col-xs-2">止盈</div>
 							<div class="col-xs-10">
 								<div class="btn-group btn-group-justified">
-									<a href="#" class="btn btn-danger">0%</a>
-									<a href="#" class="btn btn-default">10%</a>
-									<a href="#" class="btn btn-default">20%</a>
-									<a href="#" class="btn btn-default">30%</a>
-									<a href="#" class="btn btn-default">40%</a>
+									<span class="btn btn-danger">0%</span>
+									<span class="btn btn-default">10%</span>
+									<span class="btn btn-default">20%</span>
+									<span class="btn btn-default">30%</span>
+									<span class="btn btn-default">40%</span>
 								</div>
 								<div class="btn-group btn-group-justified">
-									<a href="#" class="btn btn-default">50%</a>
-									<a href="#" class="btn btn-default">60%</a>
-									<a href="#" class="btn btn-default">70%</a>
-									<a href="#" class="btn btn-default">80%</a>
-									<a href="#" class="btn btn-default">90%</a>
+									<span class="btn btn-default">50%</span>
+									<span class="btn btn-default">60%</span>
+									<span class="btn btn-default">70%</span>
+									<span class="btn btn-default">80%</span>
+									<span class="btn btn-default">90%</span>
 								</div>
 							</div>
 						</div>
@@ -152,18 +152,18 @@
 							<div class="col-xs-2">止损</div>
 							<div class="col-xs-10">
 								<div class="btn-group btn-group-justified">
-									<a href="#" class="btn btn-danger">0%</a>
-									<a href="#" class="btn btn-default">10%</a>
-									<a href="#" class="btn btn-default">20%</a>
-									<a href="#" class="btn btn-default">30%</a>
-									<a href="#" class="btn btn-default">40%</a>
+									<span class="btn btn-danger">0%</span>
+									<span class="btn btn-default">10%</span>
+									<span class="btn btn-default">20%</span>
+									<span class="btn btn-default">30%</span>
+									<span class="btn btn-default">40%</span>
 								</div>
 								<div class="btn-group btn-group-justified">
-									<a href="#" class="btn btn-default">50%</a>
-									<a href="#" class="btn btn-default">60%</a>
-									<a href="#" class="btn btn-default">70%</a>
-									<a href="#" class="btn btn-default">80%</a>
-									<a href="#" class="btn btn-default">90%</a>
+									<span class="btn btn-default">50%</span>
+									<span class="btn btn-default">60%</span>
+									<span class="btn btn-default">70%</span>
+									<span class="btn btn-default">80%</span>
+									<span class="btn btn-default">90%</span>
 								</div>
 							</div>
 						</div>
@@ -192,6 +192,17 @@
 				});
 			}
 	)
+	//chooseNum 按钮组切换效果
+	$('.modal-body .chooseNum .btn-group>.btn').on('click', function () {
+		var e = window.event || arguments[0];
+		var src = e.srcElement || e.target;
+		if (src.nodeName == "SPAN") {
+			$(src).parent().parent().find('div span[class*="btn-danger"]').removeClass('btn-danger');
+			$(src).parent().parent().find('div span[class*="btn-danger"]').addClass('btn-default')
+			$(src).removeClass('btn-default');
+			$(src).addClass('btn-danger');
+		}
+	});
 </script>
 </body>
 </html>
