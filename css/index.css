@@ -14,8 +14,8 @@ img {
   max-width: 100%;
 }
 
-.f-size {
-  font-size: .875rem
+.am-text-xxs {
+  font-size: .875rem;
 }
 
 .am-text-xs {
@@ -159,8 +159,8 @@ img {
   width: 9px;
   height: 19px;
   background: url(../img/down-arrow.png) no-repeat;
-  position: relative;
-  top: 5px;
+  position: absolute;
+  /*right: 5px;*/
 }
 
 .am-icon-long-arrow-up {
@@ -337,8 +337,10 @@ aside.slide-wrapper li.current > a {
   border-bottom: 1px solid #fff;
 }
 
-.am-jy-bg > div {
+.am-jy-bg > div[class*=col] {
   padding: 0 2%;
+  height: 40px;
+  overflow: hidden;
 }
 
 /*弹出框 样式*/
@@ -527,6 +529,7 @@ aside.slide-wrapper li.current > a {
   font-size: 10px;
   white-space: nowrap;
   padding: 0;
+  overflow: hidden;
 }
 
 .zhuanrang-rootPop-Left span:last-child {
@@ -625,4 +628,5 @@ aside.slide-wrapper li.current > a {
   background-image: url(../img/rank-list/iconpm.png);
   background-repeat: no-repeat;
   background-position: 100% 5px;
+  padding: 6px 4px;
 }
