@@ -5,12 +5,21 @@ body {
   font-size: 1.6rem;
 }
 
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
 img {
   max-width: 100%;
 }
 
 .f-size {
   font-size: .875rem
+}
+
+.am-text-xs {
+  font-size: 1.2rem;
 }
 
 .am-text-lg {
@@ -60,6 +69,17 @@ img {
 
 .am-row {
   margin: 10px 0;
+}
+
+.am-row > div[class^=col] {
+  padding: .15rem;
+}
+
+.am-row > div > div[class^=col] {
+  padding-right: 1rem;
+  padding-left: 1rem;
+  line-height: 1.6;
+  font-size: 1.6rem;
 }
 
 .am-row:before,
@@ -148,6 +168,10 @@ img {
 }
 
 /* 侧边导航 menu*/
+.am-menu-nav > ul {
+  margin: 0;
+}
+
 .am-menu-nav img {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -182,8 +206,8 @@ img {
 }
 
 .slide-mask {
-  position: absolute;
-  z-index: 2;
+  position: fixed;
+  z-index: 1140;
   left: 0;
   top: 0;
   width: 100%;
@@ -195,6 +219,9 @@ img {
   -o-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
   display: none;
+  /*filter: alpha(opacity=60);*/
+  /*opacity: 0.5;*/
+  /*-moz-opacity: 0.5;*/
 }
 
 aside.slide-wrapper {
@@ -216,6 +243,7 @@ aside.slide-wrapper {
   -ms-transition: all 0.3s ease-out;
   -o-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
+  overflow-y: auto;
 }
 
 aside.slide-wrapper > div {
@@ -223,20 +251,20 @@ aside.slide-wrapper > div {
   min-height: 100%;
 }
 
-aside.slide-wrapper > div > div {
-  padding: 0 10px;
-  height: 45px;
-  background-color: #262626;
-  overflow: hidden;
-}
+/*aside.slide-wrapper > div > div {*/
+/*padding: 0 10px;*/
+/*height: 45px;*/
+/*background-color: #262626;*/
+/*overflow: hidden;*/
+/*}*/
 
-aside.slide-wrapper > div > div strong {
-  height: 45px;
-  line-height: 45px;
-  font-size: 18px;
-  color: #fff;
-  font-weight: normal;
-}
+/*aside.slide-wrapper > div > div strong {*/
+/*height: 45px;*/
+/*line-height: 45px;*/
+/*font-size: 18px;*/
+/*color: #fff;*/
+/*font-weight: normal;*/
+/*}*/
 
 aside.slide-wrapper.moved {
   -webkit-transform: translate3d(0, 0, 0);
@@ -247,7 +275,7 @@ aside.slide-wrapper.moved {
 }
 
 aside.slide-wrapper li > a {
-  padding: 15px 40px;
+  padding: 12px 40px;
   border-top: 1px solid #4d4d4d;
   border-bottom: 1px solid #262626;
   font-size: 15px;
@@ -309,10 +337,15 @@ aside.slide-wrapper li.current > a {
   border-bottom: 1px solid #fff;
 }
 
+.am-jy-bg > div {
+  padding: 0 2%;
+}
+
 /*弹出框 样式*/
 .chooseNum .btn-group .btn {
   border: none;
   border-radius: 0;
+  padding: 0;
 }
 
 .am-modal {
@@ -320,8 +353,8 @@ aside.slide-wrapper li.current > a {
   position: fixed;
   z-index: 1101;
   top: 15%;
-  left: 5%;
-  right: 5%;
+  left: 1%;
+  right: 1%;
 }
 
 .am-modal-hd {
@@ -399,7 +432,7 @@ aside.slide-wrapper li.current > a {
   height: 40px;
   line-height: 40px;
   font-weight: bold;
-  font-size: 1.5rem;
+  font-size: 1.375rem;
   margin: 0;
   padding: 0;
   border-radius: 0;
@@ -485,12 +518,15 @@ aside.slide-wrapper li.current > a {
   height: 41px;
 }
 
-.zhuanrang-rootPop-Left span {
+.zhuanrang-rootPop-Left span,
+.zhuanrang-rootPop-Right span {
   height: 41px;
   line-height: 41px;
   display: inline-block;
   vertical-align: top;
   font-size: 10px;
+  white-space: nowrap;
+  padding: 0;
 }
 
 .zhuanrang-rootPop-Left span:last-child {
