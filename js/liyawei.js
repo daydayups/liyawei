@@ -54,8 +54,8 @@ $(function () {
       }
     })
 
-    //chooseNum 按钮组切换效果
-    $('.modal-body .chooseNum .btn-group>.btn').on('click', function () {
+    //choose-num 按钮组切换效果
+    $('.modal-body .choose-num .btn-group>.btn').on('click', function () {
       var e = window.event || arguments[0];
       var src = e.srcElement || e.target;
       if (src.nodeName == "SPAN") {
@@ -72,7 +72,7 @@ $(function () {
 
 function initOrderList() {
   //距底部
-  var navbarH = $(".zhuanrang-rootPop").height();
+  var navbarH = $(".zhuanrang-root-pop").height();
   $(".main").css("margin-bottom", navbarH);
 }
 //Copper fake value
