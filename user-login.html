@@ -1,63 +1,63 @@
 <!DOCTYPE html>
 <html>
 <head lang="en">
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link href="css/bootstrap.css" rel="stylesheet">
-	<link href="css/index.css" rel="stylesheet">
-	<!--[if lt IE 9]>
-	<script src="js/html5shiv.min.js"></script>
-	<script src="js/respond.min.js"></script>
-	<![endif]-->
-	<title>用户注册</title>
-	<style>
-		.form-group .form-control {
-			border-width: 0px;
-		}
-	</style>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="css/bootstrap.css" rel="stylesheet">
+  <link href="css/index.css" rel="stylesheet">
+  <!--[if lt IE 9]>
+  <script src="js/html5shiv.min.js"></script>
+  <script src="js/respond.min.js"></script>
+  <![endif]-->
+  <title>用户注册</title>
+  <style>
+    .form-group .form-control {
+      border-width: 0px;
+    }
+  </style>
 </head>
 <body>
 <div class="container-fluid am-text-xs">
-	<form class="form-horizontal am-row">
-		<div class="form-group">
-			<div class="col-xs-3 col-sm-2">
-				<img src="img/zc/zc_03.png" class="pull-right" alt=""/>
-			</div>
-			<div class="col-xs-9 ">
-				<label for="mobile" class="sr-only">手机号:</label>
-				<input type="type" class="form-control" id="mobile" placeholder="手机号">
-			</div>
-		</div>
-		<div class="form-group">
-			<div class="col-xs-3 col-sm-2">
-				<img src="img/zc/zc_06.png" class="pull-right" alt=""/>
-			</div>
-			<div class="col-xs-9 ">
-				<label for="pwd" class="sr-only">密码:</label>
-				<input type="type" class="form-control" id="pwd" placeholder="密码">
-			</div>
-		</div>
-		<div class="form-group">
-			<div class="col-xs-12 col-sm-10 col-sm-offset-1">
-				<a href="#" class="btn btn-danger btn-group-justified"
-					 onclick="$('[class=am-modal-bd]').html('提示信息');$('#alert-box').modal('show')">
-					登录</a>
-			</div>
-		</div>
-	</form>
+  <form class="form-horizontal am-row">
+    <div class="form-group">
+      <div class="col-xs-3 col-sm-2">
+        <img src="img/zc/zc_03.png" class="pull-right" alt=""/>
+      </div>
+      <div class="col-xs-9 ">
+        <label for="mobile" class="sr-only">手机号:</label>
+        <input type="type" class="form-control" id="mobile" placeholder="手机号">
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-xs-3 col-sm-2">
+        <img src="img/zc/zc_06.png" class="pull-right" alt=""/>
+      </div>
+      <div class="col-xs-9 ">
+        <label for="pwd" class="sr-only">密码:</label>
+        <input type="type" class="form-control" id="pwd" placeholder="密码">
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+        <a href="#" class="btn btn-danger btn-group-justified"
+           onclick="$('[class=am-modal-bd]').html('提示信息');$('#alert-box').modal('show')">
+          登录</a>
+      </div>
+    </div>
+  </form>
 </div>
 <!--弹出框-->
 <div class="modal fade" id="alert-box"></div>
 <script src="js/jquery-1.11.3.js"></script>
 <script src="js/bootstrap.js"></script>
 <script>
-	$(function () {
-				$("#alert-box").load('alert-dialog.html', function () {
-//					$('[class=am-modal-bd]').html('错误信息')
-				});
-			}
-	)
+  $(function () {
+        $("#alert-box").load('alert-dialog.html', function () {
+//$('[class=am-modal-bd]').html('错误信息')
+        });
+      }
+  )
 </script>
 </body>
 </html>

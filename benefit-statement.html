@@ -1,82 +1,82 @@
 <!DOCTYPE html>
 <html>
 <head lang="en">
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>order-list</title>
-	<link href="css/bootstrap.css" rel="stylesheet">
-	<link href="css/index.css" rel="stylesheet">
-	<!--[if lt IE 9]>
-	<script src="js/html5shiv.min.js"></script>
-	<script src="js/respond.min.js"></script>
-	<![endif]-->
-	<style>
-		table tbody tr:nth-child(even) {
-			background-color: #d9edf7;
-		}
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>order-list</title>
+  <link href="css/bootstrap.css" rel="stylesheet">
+  <link href="css/index.css" rel="stylesheet">
+  <!--[if lt IE 9]>
+  <script src="js/html5shiv.min.js"></script>
+  <script src="js/respond.min.js"></script>
+  <![endif]-->
+  <style>
+    table tbody tr:nth-child(even) {
+      background-color: #d9edf7;
+    }
 
-		table tbody tr:nth-child(odd) {
-			background-color: #f2dede;
-		}
+    table tbody tr:nth-child(odd) {
+      background-color: #f2dede;
+    }
 
-		table tr > td {
-			padding: 4px !important;
-		}
-	</style>
+    table tr > td {
+      padding: 4px !important;
+    }
+  </style>
 </head>
 <body>
 <header id="header"></header>
 <div class="table-responsive">
-	<table class="table text-center am-text-xs">
-		<thead>
-		<tr>
-			<td>交易日期
-			<td>方向
-			<td>操作
-			<td>账号余额
-			<td>盈亏
-		<tbody>
-		<tr>
-			<td>2015-12-29
-			<td>买涨
-			<td>手续费(100桶原油)
-			<td>99099.19
-			<td><span class="text-success">-0.81</span>
-		<tr>
-			<td>2015-12-29
-			<td>买涨
-			<td>平仓(150g银)
-			<td>99999.19
-			<td><span class="text-danger">0.00</span>
-		<tr>
-			<td>2015-12-29
-			<td>买涨
-			<td>手续费(1桶原油)
-			<td>99997.57
-			<td><span class="text-success">-0.81</span>
-		<tr>
-			<td>2015-12-29
-			<td>买涨
-			<td>平仓(1桶原油)
-			<td>99997.57
-			<td><span class="text-danger">0.00</span>
-		<tr>
-			<td>2015-12-29
-			<td>买涨
-			<td>手续费(1桶原油)
-			<td>99997.57
-			<td><span class="text-success">-0.81</span>
-		<tr>
-			<td>2015-12-29
-			<td>买涨
-			<td>平仓(1桶原油)
-			<td>99997.57
-			<td><span class="text-danger">0.00</span>
-	</table>
+  <table class="table text-center am-text-xs">
+    <thead>
+    <tr>
+      <td>交易日期
+      <td>方向
+      <td>操作
+      <td>账号余额
+      <td>盈亏
+        <tbody>
+    <tr>
+      <td>2015-12-29
+      <td>买涨
+      <td>手续费(100桶原油)
+      <td>99099.19
+      <td><span class="text-success">-0.81</span>
+    <tr>
+      <td>2015-12-29
+      <td>买涨
+      <td>平仓(150g银)
+      <td>99999.19
+      <td><span class="text-danger">0.00</span>
+    <tr>
+      <td>2015-12-29
+      <td>买涨
+      <td>手续费(1桶原油)
+      <td>99997.57
+      <td><span class="text-success">-0.81</span>
+    <tr>
+      <td>2015-12-29
+      <td>买涨
+      <td>平仓(1桶原油)
+      <td>99997.57
+      <td><span class="text-danger">0.00</span>
+    <tr>
+      <td>2015-12-29
+      <td>买涨
+      <td>手续费(1桶原油)
+      <td>99997.57
+      <td><span class="text-success">-0.81</span>
+    <tr>
+      <td>2015-12-29
+      <td>买涨
+      <td>平仓(1桶原油)
+      <td>99997.57
+      <td><span class="text-danger">0.00</span>
+  </table>
 </div>
 <div class="text-center">
-	<span>加载更多</span>
+  <span>加载更多</span>
 </div>
 
 <div class="slide-mask"></div>
@@ -84,17 +84,17 @@
 </aside>
 <script src="js/jquery-1.11.3.js"></script>
 <script>
-	$(function () {
-				$("#header").load('header.html', function () {
-					$('b[class*=am-header-title]').html('收支明细');
-					$("aside[class*=slide-wrapper]").load('aside.html', function () {
-						var s = document.createElement("script");
-						s.src = "js/aside.js";
-						document.body.appendChild(s)
-					});
-				});
-			}
-	)
+  $(function () {
+        $("#header").load('header.html', function () {
+          $('b[class*=am-header-title]').html('收支明细');
+          $("aside[class*=slide-wrapper]").load('aside.html', function () {
+            var s = document.createElement("script");
+            s.src = "js/aside.js";
+            document.body.appendChild(s)
+          });
+        });
+      }
+  )
 </script>
 <script src="js/jquery-1.11.3.js"></script>
 <script src="js/bootstrap.js"></script>
