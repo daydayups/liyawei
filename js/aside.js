@@ -9,15 +9,17 @@ $(function () {
 
     $('a.slide-menu').on('click', function (e) {
       $('body').css("overflow","hidden");
-      var wh = $('div.wrapperhove' + 'rtree').height();
-      $('div.slide-mask').css('height', wh).show();
-      $('aside.slide-wrapper').css('height', wh).addClass('moved');
+      //var wh = $('div.wrapperhove' + 'rtree').height();
+      //$('div.slide-mask').css('height', wh).show();
+      //$('aside.slide-wrapper').css('height', wh).addClass('moved');
+      $('div.slide-mask').show();
+      $('aside.slide-wrapper').addClass('moved');
     });
 
     $('div.slide-mask').on('click', function () {
       $('div.slide-mask').hide();
       $('aside.slide-wrapper').removeClass('moved');
-      $('body').removeAttr('style')
+      $('body').removeAttr('style');
     });
 
   }
