@@ -449,6 +449,11 @@
         });
 
         $("#exchange-code").load('exchange-code.html', function () {
+          //点击背景时不关闭模态框
+          $('#exchange-code').modal({
+            backdrop: 'static',
+            keyboard: false
+          });
           $('#exchange-code').modal('show');
         });
       }
