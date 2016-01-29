@@ -427,7 +427,8 @@
 <div class="slide-mask"></div>
 <aside class="slide-wrapper">
 </aside>
-
+<!--设置/输入交易密码-->
+<div class="modal fade" id="exchange-code"></div>
 <!--提示框-->
 <div class="modal fade" id="alert-box"></div>
 <script src="js/jquery-1.11.3.js"></script>
@@ -446,18 +447,22 @@
         $("#alert-box").load('alert-dialog.html', function () {
           $('[class=am-modal-bd]').html('下单成功')
         });
+
+        $("#exchange-code").load('exchange-code.html', function () {
+          $('#exchange-code').modal('show');
+        });
       }
   )
 </script>
 <!--<script>-->
-  <!--(function () {-->
-    <!--var s = document.createElement("script");-->
-    <!--s.onload = function () {-->
-      <!--bootlint.showLintReportForCurrentDocument([]);-->
-    <!--};-->
-    <!--s.src = "js/bootlint.js";-->
-    <!--document.body.appendChild(s)-->
-  <!--})();-->
+<!--(function () {-->
+<!--var s = document.createElement("script");-->
+<!--s.onload = function () {-->
+<!--bootlint.showLintReportForCurrentDocument([]);-->
+<!--};-->
+<!--s.src = "js/bootlint.js";-->
+<!--document.body.appendChild(s)-->
+<!--})();-->
 <!--</script>-->
 </body>
 </html>
