@@ -12,6 +12,7 @@
   <script src="js/respond.min.js"></script>
   <![endif]-->
   <style>
+    /*隔行变色*/
     table tbody tr:nth-child(even) {
       background-color: #d9edf7;
     }
@@ -23,56 +24,49 @@
     table tr > td {
       padding: 4px !important;
     }
+    /*中间的td 放了三行内容，此处撑起最后一个td的高度，内容居中显示 */
+    table tbody tr>td:last-child {
+      line-height: 4rem;
+    }
   </style>
 </head>
 <body>
 <header id="header"></header>
 <div class="table-responsive">
-  <table class="table text-center am-text-xs">
+  <table class="table am-text-xs">
     <thead>
     <tr>
-      <td>交易日期
-      <td>方向
-      <td>操作
-      <td>账号余额
-      <td>盈亏
-        <tbody>
-    <tr>
-      <td>2015-12-29
-      <td>买涨
-      <td>手续费(100桶原油)
-      <td>99099.19
-      <td><span class="text-success">-0.81</span>
-    <tr>
-      <td>2015-12-29
-      <td>买涨
-      <td>平仓(150g银)
-      <td>99999.19
-      <td><span class="text-danger">0.00</span>
-    <tr>
-      <td>2015-12-29
-      <td>买涨
-      <td>手续费(1桶原油)
-      <td>99997.57
-      <td><span class="text-success">-0.81</span>
-    <tr>
-      <td>2015-12-29
-      <td>买涨
-      <td>平仓(1桶原油)
-      <td>99997.57
-      <td><span class="text-danger">0.00</span>
-    <tr>
-      <td>2015-12-29
-      <td>买涨
-      <td>手续费(1桶原油)
-      <td>99997.57
-      <td><span class="text-success">-0.81</span>
-    <tr>
-      <td>2015-12-29
-      <td>买涨
-      <td>平仓(1桶原油)
-      <td>99997.57
-      <td><span class="text-danger">0.00</span>
+      <th>方向</th>
+      <th>说明</th>
+      <th>盈亏</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr onclick="location='order-detail.html'">
+      <td>
+        <div><span class="text-danger am-text-lg">仓储费</span></div>
+        <div>2016-01-18</div>
+      </td>
+      <td>
+        <div>合同号：20160115554545646</div>
+        <div>产品：白银500g</div>
+        <div>余额：<span class="text-primary">4915.50</span></div>
+      </td>
+      <td>-15.000</td>
+    </tr>
+    <tr onclick="location='order-detail.html'">
+      <td>
+        <div><span class="text-success am-text-lg">卖出</span></div>
+        <div>2016-01-18</div>
+      </td>
+      <td>
+        <div>合同号：20160115554545646</div>
+        <div>产品：白银500g</div>
+        <div>余额：<span class="text-primary">4339.50</span></div>
+      </td>
+      <td>645.000</td>
+    </tr>
+    </tbody>
   </table>
 </div>
 <div class="text-center">
